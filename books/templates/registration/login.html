@@ -1,0 +1,25 @@
+{% extends 'books/base.html' %}
+{% block content %}
+    <div class="formbox narrow">
+        <span class="eyebrow">
+            СНОВА ЗДРАВСТВУЙ
+        </span>
+        <h1>
+            Войти в BOOKLOOP
+        </h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="next" value="{{ next }}">
+            <button class="button">
+                Войти
+            </button>
+        </form>
+        <p>
+            Нет аккаунта?
+            <a href="{% url 'register' %}">
+                Зарегистрироваться
+            </a>
+        </p>
+    </div>
+{% endblock %}

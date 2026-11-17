@@ -1,0 +1,117 @@
+{% extends 'books/base.html' %}
+{% block content %}
+    <section class="hero">
+        <div>
+            <span class="eyebrow">
+                BOOKCROSSING · СООБЩЕСТВО ЧИТАТЕЛЕЙ
+            </span>
+            <h1>
+                Прочитал —
+                <br>
+                передай дальше.
+            </h1>
+            <p>
+                Находите книги рядом, знакомьтесь с читателями и дарите любимым историям новую жизнь.
+            </p>
+            <a class="button" href="{% url 'catalog' %}">
+                Найти книгу →
+            </a>
+        </div>
+        <div class="hero-art">
+            <div class="book b1">
+                READ
+                <br>
+                AGAIN
+            </div>
+            <div class="book b2">
+                STORIES
+            </div>
+            <div class="book b3">
+                SHARE
+            </div>
+            <b>
+                ✳
+            </b>
+        </div>
+    </section>
+    <div class="section-title">
+        <div>
+            <span class="eyebrow">
+                СЛЕДУЮЩАЯ ОСТАНОВКА
+            </span>
+            <h2>
+                Книги ищут читателя
+            </h2>
+        </div>
+        <a href="{% url 'catalog' %}">
+            Весь каталог →
+        </a>
+    </div>
+    <div class="grid">
+        {% for book in latest %}
+            <article class="card">
+                <a class="cover" href="{% url 'book_detail' book.pk %}">
+                    {% if book.cover %}
+                        <img src="{{ book.cover.url }}" alt="Обложка {{ book.title }}">
+                    {% else %}
+                        <strong>
+                            {{ book.title }}
+                        </strong>
+                        <small>
+                            {{ book.author }}
+                        </small>
+                    {% endif %}
+                </a>
+                <div class="cardbody">
+                    <span class="tag">
+                        {{ book.get_condition_display }}
+                    </span>
+                    <h3>
+                        <a href="{% url 'book_detail' book.pk %}">
+                            {{ book.title }}
+                        </a>
+                    </h3>
+                    <p>
+                        {{ book.author }}
+                    </p>
+                    <small>
+                        {{ book.city }}
+                        ·
+                        {{ book.category.name }}
+                    </small>
+                </div>
+            </article>
+        {% empty %}
+            <p>
+                Пока нет книг. Загляните позже!
+            </p>
+        {% endfor %}
+    </div>
+    <section class="how">
+        <h2>
+            У книги может быть
+            <br>
+            больше одной жизни.
+        </h2>
+        <div>
+            <b>
+                01 · Найди
+            </b>
+            <p>
+                Выбери книгу по жанру и городу.
+            </p>
+            <b>
+                02 · Договорись
+            </b>
+            <p>
+                Отправь владельцу предложение.
+            </p>
+            <b>
+                03 · Передай
+            </b>
+            <p>
+                Встретьтесь и передайте историю дальше.
+            </p>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="BOOKLOOP — обмен книгами рядом с вами">
+        <title>
+            {% block title %}
+                BOOKLOOP
+            {% endblock %}
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'books/style.css' %}">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container nav">
+                <a class="brand" href="{% url 'home' %}">
+                    BOOK
+                    <span>
+                        LOOP
+                    </span>
+                </a>
+                <button class="menu-toggle" aria-expanded="false" aria-label="Открыть меню">
+                    ☰
+                </button>
+                <nav>
+                    <a href="{% url 'catalog' %}">
+                        Каталог
+                    </a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'exchanges' %}">
+                            Мои обмены
+                        </a>
+                        <a href="{% url 'add_book' %}">
+                            Добавить книгу
+                        </a>
+                        <a href="{% url 'profile' %}">
+                            Профиль
+                        </a>
+                        {% if user.is_staff %}
+                            <a href="{% url 'moderation' %}">
+                                Модерация
+                            </a>
+                        {% endif %}
+                        <form method="post" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button class="linkbtn">
+                                Выйти
+                            </button>
+                        </form>
+                    {% else %}
+                        <a href="{% url 'login' %}">
+                            Войти
+                        </a>
+                        <a class="button small" href="{% url 'register' %}">
+                            Регистрация
+                        </a>
+                    {% endif %}
+                </nav>
+            </div>
+        </header>
+        <main class="container main">
+            {% if messages %}
+                <div aria-live="polite">
+                    {% for message in messages %}
+                        <div class="notice {{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
+            <div class="container foot">
+                BOOKLOOP · Читайте. Делитесь. Продолжайте историю.
+            </div>
+        </footer>
+        <script src="{% static 'books/app.js' %}" defer>
+        </script>
+    </body>
+</html>

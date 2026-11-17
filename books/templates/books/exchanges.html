@@ -1,0 +1,76 @@
+{% extends 'books/base.html' %}
+{% block content %}
+    <div class="heading">
+        <span class="eyebrow">
+            ДОГОВОРЁННОСТИ
+        </span>
+        <h1>
+            Мои обмены
+        </h1>
+    </div>
+    {% for e in exchanges %}
+        <article class="exchange">
+            <div>
+                <span class="tag">
+                    {{ e.get_status_display }}
+                </span>
+                <h3>
+                    {{ e.book.title }}
+                </h3>
+                <p>
+                    {% if e.requester.reader == user %}
+                        Владелец:
+                        {{ e.owner.username }}
+                    {% else %}
+                        Запрос от:
+                        {{ e.requester.username }}
+                    {% endif %}
+                </p>
+            </div>
+            <div class="actions">
+                {% if e.owner == user and e.status == 'new' %}
+                    <form method="post" action="{% url 'exchange_action' e.pk 'accept' %}">
+                        {% csrf_token %}
+                        <button class="button">
+                            Принять
+                        </button>
+                    </form>
+                    <form method="post" action="{% url 'exchange_action' e.pk 'decline' %}">
+                        {% csrf_token %}
+                        <button class="button light">
+                            Отклонить
+                        </button>
+                    </form>
+                {% endif %}
+                {% if e.requester.reader == user and e.status == 'new' or e.requester.reader == user and e.status == 'accepted' %}
+                    <form method="post" action="{% url 'exchange_action' e.pk 'cancel' %}">
+                        {% csrf_token %}
+                        <button class="textbtn">
+                            Отменить
+                        </button>
+                    </form>
+                {% endif %}
+                {% if e.owner == user and e.status == 'accepted' %}
+                    <form method="post" action="{% url 'exchange_action' e.pk 'complete' %}">
+                        {% csrf_token %}
+                        <button class="button">
+                            Подтвердить передачу
+                        </button>
+                    </form>
+                {% endif %}
+            </div>
+        </article>
+    {% empty %}
+        <div class="empty">
+            <h2>
+                Обменов пока нет
+            </h2>
+            <p>
+                Найди интересную книгу и предложи обмен.
+            </p>
+            <a class="button" href="{% url 'catalog' %}">
+                Открыть каталог
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}

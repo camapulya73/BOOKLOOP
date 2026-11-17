@@ -1,0 +1,45 @@
+{% extends 'books/base.html' %}
+{% block content %}
+    <div class="heading">
+        <span class="eyebrow">
+            ТОЛЬКО ДЛЯ АДМИНИСТРАТОРА
+        </span>
+        <h1>
+            Модерация книг
+        </h1>
+    </div>
+    {% for book in books %}
+        <article class="exchange">
+            <div>
+                <h3>
+                    {{ book.title }}
+                    —
+                    {{ book.author }}
+                </h3>
+                <p>
+                    {{ book.owner.username }}
+                    ·
+                    {{ book.city }}
+                </p>
+            </div>
+            <div class="actions">
+                <form method="post" action="{% url 'moderate_book' book.pk 'approve' %}">
+                    {% csrf_token %}
+                    <button class="button">
+                        Одобрить
+                    </button>
+                </form>
+                <form method="post" action="{% url 'moderate_book' book.pk 'reject' %}">
+                    {% csrf_token %}
+                    <button class="button light">
+                        Отклонить
+                    </button>
+                </form>
+            </div>
+        </article>
+    {% empty %}
+        <p>
+            Нет книг на модерации.
+        </p>
+    {% endfor %}
+{% endblock %}

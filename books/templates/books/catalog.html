@@ -1,0 +1,112 @@
+{% extends 'books/base.html' %}
+{% block content %}
+    <div class="heading">
+        <span class="eyebrow">
+            ОТКРОЙ СЛЕДУЮЩУЮ ИСТОРИЮ
+        </span>
+        <h1>
+            Каталог книг
+        </h1>
+        <p>
+            Ищи по названию, автору, городу и жанру.
+        </p>
+    </div>
+    <form class="filters" method="get">
+        <label>
+            Поиск
+            <input name="q" value="{{ q }}" placeholder="Название или автор">
+        </label>
+        <label>
+            Город
+            <input name="city" value="{{ city }}" placeholder="Например, Казань">
+        </label>
+        <label>
+            Жанр
+            <select name="genre">
+                <option value="">
+                    Все жанры
+                </option>
+                {% for c in genres %}
+                    <option value="{{ c.name }}" {% if selected_genre == c.name %}selected{% endif %}>
+                        {{ c.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </label>
+        <label>
+            Состояние
+            <select name="condition">
+                <option value="">
+                    Любое
+                </option>
+                <option value="new">
+                    Новое
+                </option>
+                <option value="good">
+                    Хорошее
+                </option>
+                <option value="fair">
+                    Удовлетворительное
+                </option>
+                <option value="poor">
+                    Есть заметные повреждения
+                </option>
+            </select>
+        </label>
+        <button class="button">
+            Найти
+        </button>
+    </form>
+    <p class="muted">
+        Найдено:
+        {{ books|length }}
+    </p>
+    <div class="grid">
+        {% for book in books %}
+            <article class="card">
+                <a class="cover" href="{% url 'book_detail' book.pk %}">
+                    {% if book.cover %}
+                        <img src="{{ book.cover.url }}" alt="Обложка {{ book.title }}">
+                    {% else %}
+                        <strong>
+                            {{ book.title }}
+                        </strong>
+                        <small>
+                            {{ book.author }}
+                        </small>
+                    {% endif %}
+                </a>
+                <div class="cardbody">
+                    <span class="tag">
+                        {{ book.get_condition_display }}
+                    </span>
+                    <h3>
+                        <a href="{% url 'book_detail' book.pk %}">
+                            {{ book.title }}
+                        </a>
+                    </h3>
+                    <p>
+                        {{ book.author }}
+                    </p>
+                    <small>
+                        {{ book.city }}
+                        ·
+                        {{ book.category.name }}
+                    </small>
+                </div>
+            </article>
+        {% empty %}
+            <div class="empty">
+                <h2>
+                    Пока ничего не найдено
+                </h2>
+                <p>
+                    Измени фильтры или попробуй другое название.
+                </p>
+                <a href="{% url 'catalog' %}">
+                    Сбросить фильтры
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

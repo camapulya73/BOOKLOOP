@@ -1,0 +1,21 @@
+{% extends 'books/base.html' %}
+{% block content %}
+    <div class="formbox">
+        <span class="eyebrow">
+            НОВАЯ ИСТОРИЯ
+        </span>
+        <h1>
+            {{ title }}
+        </h1>
+        <p>
+            Расскажи о произведении и экземпляре, чтобы его нашёл следующий читатель.
+        </p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="button">
+                Отправить экземпляр на модерацию
+            </button>
+        </form>
+    </div>
+{% endblock %}

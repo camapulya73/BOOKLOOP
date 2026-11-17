@@ -1,0 +1,3857 @@
+[
+{
+  "model": "core.reader",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$oY5zpIQONBymvucp3iSKym$i997X+NtC9ow9X6AGONQax6nmoeDYXVMgURT0vpZung=",
+    "last_login": null,
+    "email": "reader01@example.com",
+    "role": "admin",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:00.413Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$sQAhc8g38xDsNizEzGCvBY$pzt03QJa46S2cCcKCSB6zjLKvXvVVCZg6pcEazxXCR0=",
+    "last_login": null,
+    "email": "reader02@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:00.898Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$wz9GkKCE5haUewxjIuKqyB$Hs88d+SVdTNA4TXhpPPav/wXSCGubWL00ZkAj9vlQV0=",
+    "last_login": null,
+    "email": "reader03@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:01.377Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$P6Aqq3B9oNWU5wFNfnotLm$Cn6hZaIgEWSgYbg+f24QxK+bEPRocK57cFOSXN1FhwM=",
+    "last_login": null,
+    "email": "reader04@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:01.842Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$8hnZYKLUoo8cC6y0384pFp$z33HlAio1A9DOmTJ6YQs53Mkg4gQTj25HqeqicTRCqk=",
+    "last_login": null,
+    "email": "reader05@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:02.287Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$QqA7koNamye1rAjRGArfIx$yMcGHbwkDC58LOYeoTvVmG3HyuNruda0Wo6jFH/nRAs=",
+    "last_login": null,
+    "email": "reader06@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:02.738Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$3JENKnlpxlzYDUAcCYSflP$O/4HS5LFGB99nnM/cb8IYLHiYCwatZ2n3OS9kue/kV8=",
+    "last_login": null,
+    "email": "reader07@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:03.188Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$rBsV9j2fPRtDiFWXIwP4UT$PhFHGFsNdApBUHpB7P0x4YgGXNHIMn5shtsQSwLCNRk=",
+    "last_login": null,
+    "email": "reader08@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:03.627Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$OVIjHogWGLEwYCfwFcPDZ4$c02rEjrPzDYV1JI2x77OluY8v8HigkTPMh/bpdxN2tk=",
+    "last_login": null,
+    "email": "reader09@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:04.071Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$JMXxJI42mPSZUZu3A1cacf$/LlPPQz5kA6P157RvPzT5pPWFI9lL0qVLKsNre3xXns=",
+    "last_login": null,
+    "email": "reader10@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:04.516Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$suSreAMVPQx7Pm2BDGCT2M$L2O8OzOIxS97v0Eva92uFpgJZ61zdFOSXP4g3Ca+OxY=",
+    "last_login": null,
+    "email": "reader11@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:04.963Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$g6FjVo7Lx4SUwNaRAN8QTU$tCpFHGmPncWBdTlKHsvjs/AVc441S6+8/YMdfzmBesg=",
+    "last_login": null,
+    "email": "reader12@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:05.769Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$udncP5HfG9E5I7PNsCuyQc$5RdiA+c1LTZhrVUJXBGb/iPMX5mc6Zmy2zw2juwfY7U=",
+    "last_login": null,
+    "email": "reader13@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:06.932Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$3D6tRSSnSlPyLavXmcTLwv$v2Y6pzlWeeznlyVe3hGURBDAM1ce7/wEDot8uqYTuqA=",
+    "last_login": null,
+    "email": "reader14@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:08.105Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ngWHiHECiVQ9QSvv3Gngdr$1NHs2IBSVyzYYps4Jwli0n2/9VSunxaop/Zf5YE22mI=",
+    "last_login": null,
+    "email": "reader15@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:09.078Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$nn6nPk6JoffZ4RIzepm210$U9ozd5JME+ofuRke8qWcFMD51RaxGbb22nw6uClesjU=",
+    "last_login": null,
+    "email": "reader16@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:09.583Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$N9I05e2cEeyjJMJJ1p0cHM$MVomWEDe0rsMwVq3g3SQkMPVWjlfnxTD1DdCDGc5KmA=",
+    "last_login": null,
+    "email": "reader17@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:10.037Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$RZlRPnCHCIfZrwa2Jrd1kV$fS5RjwJHGuyheb/nf92pzZnP+mVhPpcK1NbwMmiTd8o=",
+    "last_login": null,
+    "email": "reader18@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:10.495Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$IppbFsuyNcH5ExwXHCd4eH$rmIodCEKLeyeG2jTpAbXt52xMcpn8nr6DkoKk9XncPs=",
+    "last_login": null,
+    "email": "reader19@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:10.950Z"
+  }
+},
+{
+  "model": "core.reader",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$DHRrvd7kohYM0f8Co7ATOP$2POHL8BDWQMNbFI+wZRV/xynjGFPZQuvYLvjbgeXSHg=",
+    "last_login": null,
+    "email": "reader20@example.com",
+    "role": "reader",
+    "is_active": true,
+    "date_joined": "2026-11-16T19:39:11.405Z"
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 1,
+  "fields": {
+    "reader": 1,
+    "city": "Москва",
+    "phone": "",
+    "balance": 6,
+    "display_name": "Читатель 01",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 2,
+  "fields": {
+    "reader": 2,
+    "city": "Санкт-Петербург",
+    "phone": "",
+    "balance": 7,
+    "display_name": "Читатель 02",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 3,
+  "fields": {
+    "reader": 3,
+    "city": "Казань",
+    "phone": "",
+    "balance": 8,
+    "display_name": "Читатель 03",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 4,
+  "fields": {
+    "reader": 4,
+    "city": "Екатеринбург",
+    "phone": "",
+    "balance": 9,
+    "display_name": "Читатель 04",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 5,
+  "fields": {
+    "reader": 5,
+    "city": "Новосибирск",
+    "phone": "",
+    "balance": 10,
+    "display_name": "Читатель 05",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 6,
+  "fields": {
+    "reader": 6,
+    "city": "Москва",
+    "phone": "",
+    "balance": 11,
+    "display_name": "Читатель 06",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 7,
+  "fields": {
+    "reader": 7,
+    "city": "Санкт-Петербург",
+    "phone": "",
+    "balance": 12,
+    "display_name": "Читатель 07",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 8,
+  "fields": {
+    "reader": 8,
+    "city": "Казань",
+    "phone": "",
+    "balance": 5,
+    "display_name": "Читатель 08",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 9,
+  "fields": {
+    "reader": 9,
+    "city": "Екатеринбург",
+    "phone": "",
+    "balance": 6,
+    "display_name": "Читатель 09",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 10,
+  "fields": {
+    "reader": 10,
+    "city": "Новосибирск",
+    "phone": "",
+    "balance": 7,
+    "display_name": "Читатель 10",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 11,
+  "fields": {
+    "reader": 11,
+    "city": "Москва",
+    "phone": "",
+    "balance": 8,
+    "display_name": "Читатель 11",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 12,
+  "fields": {
+    "reader": 12,
+    "city": "Санкт-Петербург",
+    "phone": "",
+    "balance": 9,
+    "display_name": "Читатель 12",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 13,
+  "fields": {
+    "reader": 13,
+    "city": "Казань",
+    "phone": "",
+    "balance": 10,
+    "display_name": "Читатель 13",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 14,
+  "fields": {
+    "reader": 14,
+    "city": "Екатеринбург",
+    "phone": "",
+    "balance": 11,
+    "display_name": "Читатель 14",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 15,
+  "fields": {
+    "reader": 15,
+    "city": "Новосибирск",
+    "phone": "",
+    "balance": 12,
+    "display_name": "Читатель 15",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 16,
+  "fields": {
+    "reader": 16,
+    "city": "Москва",
+    "phone": "",
+    "balance": 5,
+    "display_name": "Читатель 16",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 17,
+  "fields": {
+    "reader": 17,
+    "city": "Санкт-Петербург",
+    "phone": "",
+    "balance": 6,
+    "display_name": "Читатель 17",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 18,
+  "fields": {
+    "reader": 18,
+    "city": "Казань",
+    "phone": "",
+    "balance": 7,
+    "display_name": "Читатель 18",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 19,
+  "fields": {
+    "reader": 19,
+    "city": "Екатеринбург",
+    "phone": "",
+    "balance": 8,
+    "display_name": "Читатель 19",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.readerprofile",
+  "pk": 20,
+  "fields": {
+    "reader": 20,
+    "city": "Новосибирск",
+    "phone": "",
+    "balance": 9,
+    "display_name": "Читатель 20",
+    "about": "Демонстрационный профиль участника BOOKLOOP."
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Роман",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Антиутопия",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Сказка",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Детектив",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Фэнтези",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Фантастика",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Поэзия",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Приключения",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 9,
+  "fields": {
+    "name": "Притча",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 10,
+  "fields": {
+    "name": "Повесть",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 11,
+  "fields": {
+    "name": "Классика",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 12,
+  "fields": {
+    "name": "История",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 13,
+  "fields": {
+    "name": "Психология",
+    "description": ""
+  }
+},
+{
+  "model": "core.genre",
+  "pk": 14,
+  "fields": {
+    "name": "Нон-фикшн",
+    "description": ""
+  }
+},
+{
+  "model": "core.book",
+  "pk": 1,
+  "fields": {
+    "title": "Мастер и Маргарита",
+    "author": "Михаил Булгаков",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Мастер и Маргарита»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 2,
+  "fields": {
+    "title": "1984",
+    "author": "Джордж Оруэлл",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «1984»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 3,
+  "fields": {
+    "title": "Скотный двор",
+    "author": "Джордж Оруэлл",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Скотный двор»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 4,
+  "fields": {
+    "title": "451 градус по Фаренгейту",
+    "author": "Рэй Брэдбери",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «451 градус по Фаренгейту»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 5,
+  "fields": {
+    "title": "О дивный новый мир",
+    "author": "Олдос Хаксли",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «О дивный новый мир»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 6,
+  "fields": {
+    "title": "Маленький принц",
+    "author": "Антуан де Сент-Экзюпери",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Маленький принц»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 7,
+  "fields": {
+    "title": "Отцы и дети",
+    "author": "Иван Тургенев",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Отцы и дети»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 8,
+  "fields": {
+    "title": "Анна Каренина",
+    "author": "Лев Толстой",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Анна Каренина»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 9,
+  "fields": {
+    "title": "Собака Баскервилей",
+    "author": "Артур Конан Дойл",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Собака Баскервилей»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 10,
+  "fields": {
+    "title": "Властелин колец",
+    "author": "Джон Р. Р. Толкин",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Властелин колец»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 11,
+  "fields": {
+    "title": "Преступление и наказание",
+    "author": "Фёдор Достоевский",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Преступление и наказание»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 12,
+  "fields": {
+    "title": "Дюна",
+    "author": "Фрэнк Герберт",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Дюна»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 13,
+  "fields": {
+    "title": "Пикник на обочине",
+    "author": "Аркадий и Борис Стругацкие",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Пикник на обочине»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 14,
+  "fields": {
+    "title": "Норвежский лес",
+    "author": "Харуки Мураками",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Норвежский лес»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 15,
+  "fields": {
+    "title": "Евгений Онегин",
+    "author": "Александр Пушкин",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Евгений Онегин»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 16,
+  "fields": {
+    "title": "Граф Монте-Кристо",
+    "author": "Александр Дюма",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Граф Монте-Кристо»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 17,
+  "fields": {
+    "title": "Шерлок Холмс: Этюд в багровых тонах",
+    "author": "Артур Конан Дойл",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Шерлок Холмс: Этюд в багровых тонах»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 18,
+  "fields": {
+    "title": "Три товарища",
+    "author": "Эрих Мария Ремарк",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Три товарища»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 19,
+  "fields": {
+    "title": "Идиот",
+    "author": "Фёдор Достоевский",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Идиот»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 20,
+  "fields": {
+    "title": "Гарри Поттер и философский камень",
+    "author": "Дж. К. Роулинг",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Гарри Поттер и философский камень»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 21,
+  "fields": {
+    "title": "Солярис",
+    "author": "Станислав Лем",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Солярис»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 22,
+  "fields": {
+    "title": "Человек-невидимка",
+    "author": "Герберт Уэллс",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Человек-невидимка»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 23,
+  "fields": {
+    "title": "Вино из одуванчиков",
+    "author": "Рэй Брэдбери",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Вино из одуванчиков»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 24,
+  "fields": {
+    "title": "Тихий Дон",
+    "author": "Михаил Шолохов",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Тихий Дон»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 25,
+  "fields": {
+    "title": "Алхимик",
+    "author": "Пауло Коэльо",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Алхимик»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 26,
+  "fields": {
+    "title": "Имя розы",
+    "author": "Умберто Эко",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Имя розы»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 27,
+  "fields": {
+    "title": "Цветы для Элджернона",
+    "author": "Дэниел Киз",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Цветы для Элджернона»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 28,
+  "fields": {
+    "title": "Чайка по имени Джонатан Ливингстон",
+    "author": "Ричард Бах",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Чайка по имени Джонатан Ливингстон»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 29,
+  "fields": {
+    "title": "Повелитель мух",
+    "author": "Уильям Голдинг",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Повелитель мух»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 30,
+  "fields": {
+    "title": "Доктор Живаго",
+    "author": "Борис Пастернак",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Доктор Живаго»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 31,
+  "fields": {
+    "title": "Три мушкетёра",
+    "author": "Александр Дюма",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Три мушкетёра»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 32,
+  "fields": {
+    "title": "Капитанская дочка",
+    "author": "Александр Пушкин",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Капитанская дочка»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 33,
+  "fields": {
+    "title": "Понедельник начинается в субботу",
+    "author": "Аркадий и Борис Стругацкие",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Понедельник начинается в субботу»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 34,
+  "fields": {
+    "title": "Остров сокровищ",
+    "author": "Роберт Льюис Стивенсон",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Остров сокровищ»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 35,
+  "fields": {
+    "title": "Моби Дик",
+    "author": "Герман Мелвилл",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Моби Дик»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 36,
+  "fields": {
+    "title": "Гордость и предубеждение",
+    "author": "Джейн Остин",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Гордость и предубеждение»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 37,
+  "fields": {
+    "title": "Маленькие женщины",
+    "author": "Луиза Мэй Олкотт",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Маленькие женщины»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 38,
+  "fields": {
+    "title": "Человек в высоком замке",
+    "author": "Филип Дик",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Человек в высоком замке»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 39,
+  "fields": {
+    "title": "Зов предков",
+    "author": "Джек Лондон",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Зов предков»."
+  }
+},
+{
+  "model": "core.book",
+  "pk": 40,
+  "fields": {
+    "title": "Старик и море",
+    "author": "Эрнест Хемингуэй",
+    "isbn": "",
+    "year": null,
+    "description": "Демонстрационное описание произведения «Старик и море»."
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 1,
+  "fields": {
+    "book": 1,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 2,
+  "fields": {
+    "book": 2,
+    "genre": "Антиутопия"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 3,
+  "fields": {
+    "book": 3,
+    "genre": "Антиутопия"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 4,
+  "fields": {
+    "book": 4,
+    "genre": "Антиутопия"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 5,
+  "fields": {
+    "book": 5,
+    "genre": "Антиутопия"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 6,
+  "fields": {
+    "book": 6,
+    "genre": "Сказка"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 7,
+  "fields": {
+    "book": 7,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 8,
+  "fields": {
+    "book": 8,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 9,
+  "fields": {
+    "book": 9,
+    "genre": "Детектив"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 10,
+  "fields": {
+    "book": 10,
+    "genre": "Фэнтези"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 11,
+  "fields": {
+    "book": 11,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 12,
+  "fields": {
+    "book": 12,
+    "genre": "Фантастика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 13,
+  "fields": {
+    "book": 13,
+    "genre": "Фантастика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 14,
+  "fields": {
+    "book": 14,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 15,
+  "fields": {
+    "book": 15,
+    "genre": "Поэзия"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 16,
+  "fields": {
+    "book": 16,
+    "genre": "Приключения"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 17,
+  "fields": {
+    "book": 17,
+    "genre": "Детектив"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 18,
+  "fields": {
+    "book": 18,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 19,
+  "fields": {
+    "book": 19,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 20,
+  "fields": {
+    "book": 20,
+    "genre": "Фэнтези"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 21,
+  "fields": {
+    "book": 21,
+    "genre": "Фантастика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 22,
+  "fields": {
+    "book": 22,
+    "genre": "Фантастика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 23,
+  "fields": {
+    "book": 23,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 24,
+  "fields": {
+    "book": 24,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 25,
+  "fields": {
+    "book": 25,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 26,
+  "fields": {
+    "book": 26,
+    "genre": "Детектив"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 27,
+  "fields": {
+    "book": 27,
+    "genre": "Фантастика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 28,
+  "fields": {
+    "book": 28,
+    "genre": "Притча"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 29,
+  "fields": {
+    "book": 29,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 30,
+  "fields": {
+    "book": 30,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 31,
+  "fields": {
+    "book": 31,
+    "genre": "Приключения"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 32,
+  "fields": {
+    "book": 32,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 33,
+  "fields": {
+    "book": 33,
+    "genre": "Фантастика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 34,
+  "fields": {
+    "book": 34,
+    "genre": "Приключения"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 35,
+  "fields": {
+    "book": 35,
+    "genre": "Приключения"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 36,
+  "fields": {
+    "book": 36,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 37,
+  "fields": {
+    "book": 37,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 38,
+  "fields": {
+    "book": 38,
+    "genre": "Фантастика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 39,
+  "fields": {
+    "book": 39,
+    "genre": "Приключения"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 40,
+  "fields": {
+    "book": 40,
+    "genre": "Повесть"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 41,
+  "fields": {
+    "book": 1,
+    "genre": "Классика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 42,
+  "fields": {
+    "book": 2,
+    "genre": "Приключения"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 43,
+  "fields": {
+    "book": 3,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 44,
+  "fields": {
+    "book": 4,
+    "genre": "История"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 45,
+  "fields": {
+    "book": 5,
+    "genre": "Фантастика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 46,
+  "fields": {
+    "book": 6,
+    "genre": "Психология"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 47,
+  "fields": {
+    "book": 7,
+    "genre": "Детектив"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 48,
+  "fields": {
+    "book": 8,
+    "genre": "Фэнтези"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 49,
+  "fields": {
+    "book": 9,
+    "genre": "Нон-фикшн"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 50,
+  "fields": {
+    "book": 10,
+    "genre": "Поэзия"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 51,
+  "fields": {
+    "book": 11,
+    "genre": "Классика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 52,
+  "fields": {
+    "book": 12,
+    "genre": "Классика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 53,
+  "fields": {
+    "book": 13,
+    "genre": "Классика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 54,
+  "fields": {
+    "book": 14,
+    "genre": "Приключения"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 55,
+  "fields": {
+    "book": 15,
+    "genre": "Роман"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 56,
+  "fields": {
+    "book": 16,
+    "genre": "История"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 57,
+  "fields": {
+    "book": 17,
+    "genre": "Фантастика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 58,
+  "fields": {
+    "book": 18,
+    "genre": "Психология"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 59,
+  "fields": {
+    "book": 19,
+    "genre": "Детектив"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 60,
+  "fields": {
+    "book": 20,
+    "genre": "Классика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 61,
+  "fields": {
+    "book": 21,
+    "genre": "Нон-фикшн"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 62,
+  "fields": {
+    "book": 22,
+    "genre": "Поэзия"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 63,
+  "fields": {
+    "book": 23,
+    "genre": "Классика"
+  }
+},
+{
+  "model": "core.bookgenre",
+  "pk": 64,
+  "fields": {
+    "book": 24,
+    "genre": "Классика"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 1,
+  "fields": {
+    "book": 1,
+    "owner": 1,
+    "condition": "new",
+    "city": "Москва",
+    "is_available": false,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.449Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 2,
+  "fields": {
+    "book": 2,
+    "owner": 2,
+    "condition": "good",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.450Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 3,
+  "fields": {
+    "book": 3,
+    "owner": 3,
+    "condition": "fair",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.450Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 4,
+  "fields": {
+    "book": 4,
+    "owner": 4,
+    "condition": "poor",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.451Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 5,
+  "fields": {
+    "book": 5,
+    "owner": 5,
+    "condition": "new",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.452Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 6,
+  "fields": {
+    "book": 6,
+    "owner": 6,
+    "condition": "good",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.452Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 7,
+  "fields": {
+    "book": 7,
+    "owner": 18,
+    "condition": "fair",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.453Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 8,
+  "fields": {
+    "book": 8,
+    "owner": 20,
+    "condition": "poor",
+    "city": "Москва",
+    "is_available": false,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.453Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 9,
+  "fields": {
+    "book": 9,
+    "owner": 14,
+    "condition": "new",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.454Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 10,
+  "fields": {
+    "book": 10,
+    "owner": 8,
+    "condition": "good",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.455Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 11,
+  "fields": {
+    "book": 11,
+    "owner": 11,
+    "condition": "fair",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.455Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 12,
+  "fields": {
+    "book": 12,
+    "owner": 12,
+    "condition": "poor",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.456Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 13,
+  "fields": {
+    "book": 13,
+    "owner": 13,
+    "condition": "new",
+    "city": "Казань",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.456Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 14,
+  "fields": {
+    "book": 14,
+    "owner": 14,
+    "condition": "good",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.457Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 15,
+  "fields": {
+    "book": 15,
+    "owner": 15,
+    "condition": "fair",
+    "city": "Новосибирск",
+    "is_available": false,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.457Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 16,
+  "fields": {
+    "book": 16,
+    "owner": 16,
+    "condition": "poor",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.458Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 17,
+  "fields": {
+    "book": 17,
+    "owner": 17,
+    "condition": "new",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.458Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 18,
+  "fields": {
+    "book": 18,
+    "owner": 18,
+    "condition": "good",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.459Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 19,
+  "fields": {
+    "book": 19,
+    "owner": 19,
+    "condition": "fair",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.460Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 20,
+  "fields": {
+    "book": 20,
+    "owner": 20,
+    "condition": "poor",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.461Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 21,
+  "fields": {
+    "book": 21,
+    "owner": 1,
+    "condition": "new",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.461Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 22,
+  "fields": {
+    "book": 22,
+    "owner": 2,
+    "condition": "good",
+    "city": "Санкт-Петербург",
+    "is_available": false,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.462Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 23,
+  "fields": {
+    "book": 23,
+    "owner": 3,
+    "condition": "fair",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.462Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 24,
+  "fields": {
+    "book": 24,
+    "owner": 4,
+    "condition": "poor",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.463Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 25,
+  "fields": {
+    "book": 25,
+    "owner": 5,
+    "condition": "new",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.463Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 26,
+  "fields": {
+    "book": 26,
+    "owner": 6,
+    "condition": "good",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.464Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 27,
+  "fields": {
+    "book": 27,
+    "owner": 7,
+    "condition": "fair",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.465Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 28,
+  "fields": {
+    "book": 28,
+    "owner": 8,
+    "condition": "poor",
+    "city": "Казань",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.465Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 29,
+  "fields": {
+    "book": 29,
+    "owner": 9,
+    "condition": "new",
+    "city": "Екатеринбург",
+    "is_available": false,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.466Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 30,
+  "fields": {
+    "book": 30,
+    "owner": 10,
+    "condition": "good",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.466Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 31,
+  "fields": {
+    "book": 31,
+    "owner": 11,
+    "condition": "fair",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.467Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 32,
+  "fields": {
+    "book": 32,
+    "owner": 12,
+    "condition": "poor",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.467Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 33,
+  "fields": {
+    "book": 33,
+    "owner": 13,
+    "condition": "new",
+    "city": "Казань",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.468Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 34,
+  "fields": {
+    "book": 34,
+    "owner": 14,
+    "condition": "good",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.469Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 35,
+  "fields": {
+    "book": 35,
+    "owner": 15,
+    "condition": "fair",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.469Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 36,
+  "fields": {
+    "book": 36,
+    "owner": 16,
+    "condition": "poor",
+    "city": "Москва",
+    "is_available": false,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.470Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 37,
+  "fields": {
+    "book": 37,
+    "owner": 17,
+    "condition": "new",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.471Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 38,
+  "fields": {
+    "book": 38,
+    "owner": 18,
+    "condition": "good",
+    "city": "Казань",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.472Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 39,
+  "fields": {
+    "book": 39,
+    "owner": 19,
+    "condition": "fair",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.472Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 40,
+  "fields": {
+    "book": 40,
+    "owner": 20,
+    "condition": "poor",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.473Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 41,
+  "fields": {
+    "book": 1,
+    "owner": 1,
+    "condition": "new",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.474Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 42,
+  "fields": {
+    "book": 6,
+    "owner": 20,
+    "condition": "good",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.475Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 43,
+  "fields": {
+    "book": 1,
+    "owner": 20,
+    "condition": "fair",
+    "city": "Казань",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.475Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 44,
+  "fields": {
+    "book": 4,
+    "owner": 4,
+    "condition": "poor",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.476Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 45,
+  "fields": {
+    "book": 5,
+    "owner": 5,
+    "condition": "new",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.477Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 46,
+  "fields": {
+    "book": 6,
+    "owner": 6,
+    "condition": "good",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.477Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 47,
+  "fields": {
+    "book": 7,
+    "owner": 7,
+    "condition": "fair",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.478Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 48,
+  "fields": {
+    "book": 8,
+    "owner": 8,
+    "condition": "poor",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.479Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 49,
+  "fields": {
+    "book": 9,
+    "owner": 9,
+    "condition": "new",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.479Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 50,
+  "fields": {
+    "book": 10,
+    "owner": 10,
+    "condition": "good",
+    "city": "Новосибирск",
+    "is_available": false,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.480Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 51,
+  "fields": {
+    "book": 11,
+    "owner": 11,
+    "condition": "fair",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.480Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 52,
+  "fields": {
+    "book": 12,
+    "owner": 12,
+    "condition": "poor",
+    "city": "Санкт-Петербург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.481Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 53,
+  "fields": {
+    "book": 13,
+    "owner": 13,
+    "condition": "new",
+    "city": "Казань",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.482Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 54,
+  "fields": {
+    "book": 14,
+    "owner": 14,
+    "condition": "good",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.482Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 55,
+  "fields": {
+    "book": 15,
+    "owner": 15,
+    "condition": "fair",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.483Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 56,
+  "fields": {
+    "book": 16,
+    "owner": 16,
+    "condition": "poor",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.484Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 57,
+  "fields": {
+    "book": 17,
+    "owner": 17,
+    "condition": "new",
+    "city": "Санкт-Петербург",
+    "is_available": false,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.484Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 58,
+  "fields": {
+    "book": 18,
+    "owner": 18,
+    "condition": "good",
+    "city": "Москва",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.485Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 59,
+  "fields": {
+    "book": 19,
+    "owner": 19,
+    "condition": "fair",
+    "city": "Екатеринбург",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.485Z"
+  }
+},
+{
+  "model": "core.copy",
+  "pk": 60,
+  "fields": {
+    "book": 20,
+    "owner": 20,
+    "condition": "poor",
+    "city": "Новосибирск",
+    "is_available": true,
+    "moderation_status": "approved",
+    "created_at": "2026-11-16T19:39:11.486Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 1,
+  "fields": {
+    "copy": 1,
+    "requester": 6,
+    "status": "accepted",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.486Z",
+    "track_no": "",
+    "created_at": "2026-10-26T19:39:11.487Z",
+    "updated_at": "2026-11-16T19:39:11.487Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 2,
+  "fields": {
+    "copy": 2,
+    "requester": 7,
+    "status": "accepted",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.488Z",
+    "track_no": "",
+    "created_at": "2026-10-25T19:39:11.488Z",
+    "updated_at": "2026-11-16T19:39:11.488Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 3,
+  "fields": {
+    "copy": 3,
+    "requester": 8,
+    "status": "accepted",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.488Z",
+    "track_no": "",
+    "created_at": "2026-10-24T19:39:11.488Z",
+    "updated_at": "2026-11-16T19:39:11.488Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 4,
+  "fields": {
+    "copy": 4,
+    "requester": 9,
+    "status": "accepted",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.489Z",
+    "track_no": "",
+    "created_at": "2026-10-23T19:39:11.489Z",
+    "updated_at": "2026-11-16T19:39:11.489Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 5,
+  "fields": {
+    "copy": 5,
+    "requester": 10,
+    "status": "accepted",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.490Z",
+    "track_no": "",
+    "created_at": "2026-10-22T19:39:11.490Z",
+    "updated_at": "2026-11-16T19:39:11.490Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 6,
+  "fields": {
+    "copy": 7,
+    "requester": 12,
+    "status": "new",
+    "method": "",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "",
+    "created_at": "2026-11-14T19:39:11.491Z",
+    "updated_at": "2026-11-16T19:39:11.491Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 7,
+  "fields": {
+    "copy": 8,
+    "requester": 19,
+    "status": "new",
+    "method": "",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "",
+    "created_at": "2026-11-13T19:39:11.492Z",
+    "updated_at": "2026-11-16T19:39:11.492Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 8,
+  "fields": {
+    "copy": 8,
+    "requester": 13,
+    "status": "sent",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000008",
+    "created_at": "2026-10-19T19:39:11.493Z",
+    "updated_at": "2026-11-16T19:39:11.493Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 9,
+  "fields": {
+    "copy": 9,
+    "requester": 14,
+    "status": "sent",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000009",
+    "created_at": "2026-10-18T19:39:11.494Z",
+    "updated_at": "2026-11-16T19:39:11.494Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 10,
+  "fields": {
+    "copy": 10,
+    "requester": 15,
+    "status": "sent",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000010",
+    "created_at": "2026-10-17T19:39:11.495Z",
+    "updated_at": "2026-11-16T19:39:11.494Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 11,
+  "fields": {
+    "copy": 11,
+    "requester": 16,
+    "status": "sent",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000011",
+    "created_at": "2026-10-16T19:39:11.495Z",
+    "updated_at": "2026-11-16T19:39:11.495Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 12,
+  "fields": {
+    "copy": 12,
+    "requester": 17,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000012",
+    "created_at": "2026-10-15T19:39:11.496Z",
+    "updated_at": "2026-11-16T19:39:11.496Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 13,
+  "fields": {
+    "copy": 13,
+    "requester": 18,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000013",
+    "created_at": "2026-10-14T19:39:11.497Z",
+    "updated_at": "2026-11-16T19:39:11.497Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 14,
+  "fields": {
+    "copy": 14,
+    "requester": 19,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000014",
+    "created_at": "2026-10-13T19:39:11.499Z",
+    "updated_at": "2026-11-16T19:39:11.498Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 15,
+  "fields": {
+    "copy": 15,
+    "requester": 20,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000015",
+    "created_at": "2026-10-12T19:39:11.500Z",
+    "updated_at": "2026-11-16T19:39:11.499Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 16,
+  "fields": {
+    "copy": 16,
+    "requester": 1,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000016",
+    "created_at": "2026-10-11T19:39:11.501Z",
+    "updated_at": "2026-11-16T19:39:11.500Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 17,
+  "fields": {
+    "copy": 17,
+    "requester": 2,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000017",
+    "created_at": "2026-10-10T19:39:11.501Z",
+    "updated_at": "2026-11-16T19:39:11.501Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 18,
+  "fields": {
+    "copy": 18,
+    "requester": 3,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000018",
+    "created_at": "2026-10-09T19:39:11.502Z",
+    "updated_at": "2026-11-16T19:39:11.502Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 19,
+  "fields": {
+    "copy": 19,
+    "requester": 4,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000019",
+    "created_at": "2026-10-08T19:39:11.503Z",
+    "updated_at": "2026-11-16T19:39:11.503Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 20,
+  "fields": {
+    "copy": 20,
+    "requester": 5,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000020",
+    "created_at": "2026-10-07T19:39:11.504Z",
+    "updated_at": "2026-11-16T19:39:11.504Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 21,
+  "fields": {
+    "copy": 21,
+    "requester": 6,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000021",
+    "created_at": "2026-10-06T19:39:11.505Z",
+    "updated_at": "2026-11-16T19:39:11.505Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 22,
+  "fields": {
+    "copy": 10,
+    "requester": 5,
+    "status": "new",
+    "method": "",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "",
+    "created_at": "2026-11-11T19:39:11.506Z",
+    "updated_at": "2026-11-16T19:39:11.506Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 23,
+  "fields": {
+    "copy": 23,
+    "requester": 8,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000023",
+    "created_at": "2026-10-04T19:39:11.507Z",
+    "updated_at": "2026-11-16T19:39:11.506Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 24,
+  "fields": {
+    "copy": 24,
+    "requester": 9,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000024",
+    "created_at": "2026-10-03T19:39:11.507Z",
+    "updated_at": "2026-11-16T19:39:11.507Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 25,
+  "fields": {
+    "copy": 25,
+    "requester": 10,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000025",
+    "created_at": "2026-10-02T19:39:11.508Z",
+    "updated_at": "2026-11-16T19:39:11.508Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 26,
+  "fields": {
+    "copy": 26,
+    "requester": 11,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000026",
+    "created_at": "2026-10-01T19:39:11.509Z",
+    "updated_at": "2026-11-16T19:39:11.509Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 27,
+  "fields": {
+    "copy": 9,
+    "requester": 5,
+    "status": "new",
+    "method": "",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "",
+    "created_at": "2026-11-12T19:39:11.510Z",
+    "updated_at": "2026-11-16T19:39:11.509Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 28,
+  "fields": {
+    "copy": 28,
+    "requester": 13,
+    "status": "cancelled",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.510Z",
+    "track_no": "",
+    "created_at": "2026-09-29T19:39:11.510Z",
+    "updated_at": "2026-11-16T19:39:11.510Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 29,
+  "fields": {
+    "copy": 29,
+    "requester": 14,
+    "status": "cancelled",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.511Z",
+    "track_no": "",
+    "created_at": "2026-09-28T19:39:11.511Z",
+    "updated_at": "2026-11-16T19:39:11.511Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 30,
+  "fields": {
+    "copy": 30,
+    "requester": 15,
+    "status": "cancelled",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.511Z",
+    "track_no": "",
+    "created_at": "2026-09-27T19:39:11.512Z",
+    "updated_at": "2026-11-16T19:39:11.511Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 31,
+  "fields": {
+    "copy": 31,
+    "requester": 16,
+    "status": "dispute",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.512Z",
+    "track_no": "",
+    "created_at": "2026-09-26T19:39:11.512Z",
+    "updated_at": "2026-11-16T19:39:11.512Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 32,
+  "fields": {
+    "copy": 32,
+    "requester": 17,
+    "status": "dispute",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.513Z",
+    "track_no": "",
+    "created_at": "2026-09-25T19:39:11.513Z",
+    "updated_at": "2026-11-16T19:39:11.513Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 33,
+  "fields": {
+    "copy": 42,
+    "requester": 15,
+    "status": "new",
+    "method": "",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "",
+    "created_at": "2026-11-15T19:39:11.514Z",
+    "updated_at": "2026-11-16T19:39:11.514Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 34,
+  "fields": {
+    "copy": 34,
+    "requester": 19,
+    "status": "dispute",
+    "method": "meet",
+    "meet_place": "Казань, центральная библиотека",
+    "meet_at": "2026-11-19T19:39:11.514Z",
+    "track_no": "",
+    "created_at": "2026-09-23T19:39:11.514Z",
+    "updated_at": "2026-11-16T19:39:11.514Z"
+  }
+},
+{
+  "model": "core.exchange",
+  "pk": 35,
+  "fields": {
+    "copy": 35,
+    "requester": 20,
+    "status": "done",
+    "method": "post",
+    "meet_place": "",
+    "meet_at": null,
+    "track_no": "RU0000000035",
+    "created_at": "2026-09-22T19:39:11.515Z",
+    "updated_at": "2026-11-16T19:39:11.515Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 1,
+  "fields": {
+    "exchange": 1,
+    "old_status": "new",
+    "new_status": "accepted",
+    "changed_by": 1,
+    "changed_at": "2026-11-16T19:39:11.487Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 2,
+  "fields": {
+    "exchange": 1,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "changed_by": 2,
+    "changed_at": "2026-11-16T19:39:11.487Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 3,
+  "fields": {
+    "exchange": 2,
+    "old_status": "new",
+    "new_status": "accepted",
+    "changed_by": 2,
+    "changed_at": "2026-11-16T19:39:11.488Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 4,
+  "fields": {
+    "exchange": 2,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "changed_by": 3,
+    "changed_at": "2026-11-16T19:39:11.488Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 5,
+  "fields": {
+    "exchange": 3,
+    "old_status": "new",
+    "new_status": "accepted",
+    "changed_by": 3,
+    "changed_at": "2026-11-16T19:39:11.489Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 6,
+  "fields": {
+    "exchange": 3,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "changed_by": 4,
+    "changed_at": "2026-11-16T19:39:11.489Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 7,
+  "fields": {
+    "exchange": 4,
+    "old_status": "new",
+    "new_status": "accepted",
+    "changed_by": 4,
+    "changed_at": "2026-11-16T19:39:11.489Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 8,
+  "fields": {
+    "exchange": 4,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "changed_by": 5,
+    "changed_at": "2026-11-16T19:39:11.490Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 9,
+  "fields": {
+    "exchange": 5,
+    "old_status": "new",
+    "new_status": "accepted",
+    "changed_by": 5,
+    "changed_at": "2026-11-16T19:39:11.490Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 10,
+  "fields": {
+    "exchange": 5,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "changed_by": 6,
+    "changed_at": "2026-11-16T19:39:11.490Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 11,
+  "fields": {
+    "exchange": 6,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 6,
+    "changed_at": "2026-11-16T19:39:11.491Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 12,
+  "fields": {
+    "exchange": 6,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 7,
+    "changed_at": "2026-11-16T19:39:11.491Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 13,
+  "fields": {
+    "exchange": 7,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 7,
+    "changed_at": "2026-11-16T19:39:11.492Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 14,
+  "fields": {
+    "exchange": 7,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 8,
+    "changed_at": "2026-11-16T19:39:11.492Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 15,
+  "fields": {
+    "exchange": 8,
+    "old_status": "new",
+    "new_status": "sent",
+    "changed_by": 8,
+    "changed_at": "2026-11-16T19:39:11.493Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 16,
+  "fields": {
+    "exchange": 8,
+    "old_status": "sent",
+    "new_status": "sent",
+    "changed_by": 9,
+    "changed_at": "2026-11-16T19:39:11.493Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 17,
+  "fields": {
+    "exchange": 9,
+    "old_status": "new",
+    "new_status": "sent",
+    "changed_by": 9,
+    "changed_at": "2026-11-16T19:39:11.494Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 18,
+  "fields": {
+    "exchange": 9,
+    "old_status": "sent",
+    "new_status": "sent",
+    "changed_by": 10,
+    "changed_at": "2026-11-16T19:39:11.494Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 19,
+  "fields": {
+    "exchange": 10,
+    "old_status": "new",
+    "new_status": "sent",
+    "changed_by": 10,
+    "changed_at": "2026-11-16T19:39:11.495Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 20,
+  "fields": {
+    "exchange": 10,
+    "old_status": "sent",
+    "new_status": "sent",
+    "changed_by": 11,
+    "changed_at": "2026-11-16T19:39:11.495Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 21,
+  "fields": {
+    "exchange": 11,
+    "old_status": "new",
+    "new_status": "sent",
+    "changed_by": 11,
+    "changed_at": "2026-11-16T19:39:11.496Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 22,
+  "fields": {
+    "exchange": 11,
+    "old_status": "sent",
+    "new_status": "sent",
+    "changed_by": 12,
+    "changed_at": "2026-11-16T19:39:11.496Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 23,
+  "fields": {
+    "exchange": 12,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 12,
+    "changed_at": "2026-11-16T19:39:11.497Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 24,
+  "fields": {
+    "exchange": 12,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 13,
+    "changed_at": "2026-11-16T19:39:11.497Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 25,
+  "fields": {
+    "exchange": 13,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 13,
+    "changed_at": "2026-11-16T19:39:11.498Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 26,
+  "fields": {
+    "exchange": 13,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 14,
+    "changed_at": "2026-11-16T19:39:11.498Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 27,
+  "fields": {
+    "exchange": 14,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 14,
+    "changed_at": "2026-11-16T19:39:11.499Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 28,
+  "fields": {
+    "exchange": 14,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 15,
+    "changed_at": "2026-11-16T19:39:11.499Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 29,
+  "fields": {
+    "exchange": 15,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 15,
+    "changed_at": "2026-11-16T19:39:11.500Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 30,
+  "fields": {
+    "exchange": 15,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 16,
+    "changed_at": "2026-11-16T19:39:11.500Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 31,
+  "fields": {
+    "exchange": 16,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 16,
+    "changed_at": "2026-11-16T19:39:11.501Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 32,
+  "fields": {
+    "exchange": 16,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 17,
+    "changed_at": "2026-11-16T19:39:11.501Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 33,
+  "fields": {
+    "exchange": 17,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 17,
+    "changed_at": "2026-11-16T19:39:11.502Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 34,
+  "fields": {
+    "exchange": 17,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 18,
+    "changed_at": "2026-11-16T19:39:11.502Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 35,
+  "fields": {
+    "exchange": 18,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 18,
+    "changed_at": "2026-11-16T19:39:11.503Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 36,
+  "fields": {
+    "exchange": 18,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 19,
+    "changed_at": "2026-11-16T19:39:11.503Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 37,
+  "fields": {
+    "exchange": 19,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 19,
+    "changed_at": "2026-11-16T19:39:11.504Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 38,
+  "fields": {
+    "exchange": 19,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 20,
+    "changed_at": "2026-11-16T19:39:11.504Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 39,
+  "fields": {
+    "exchange": 20,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 20,
+    "changed_at": "2026-11-16T19:39:11.504Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 40,
+  "fields": {
+    "exchange": 20,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 1,
+    "changed_at": "2026-11-16T19:39:11.505Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 41,
+  "fields": {
+    "exchange": 21,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 1,
+    "changed_at": "2026-11-16T19:39:11.505Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 42,
+  "fields": {
+    "exchange": 21,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 2,
+    "changed_at": "2026-11-16T19:39:11.505Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 43,
+  "fields": {
+    "exchange": 22,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 2,
+    "changed_at": "2026-11-16T19:39:11.506Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 44,
+  "fields": {
+    "exchange": 22,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 3,
+    "changed_at": "2026-11-16T19:39:11.506Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 45,
+  "fields": {
+    "exchange": 23,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 3,
+    "changed_at": "2026-11-16T19:39:11.507Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 46,
+  "fields": {
+    "exchange": 23,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 4,
+    "changed_at": "2026-11-16T19:39:11.507Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 47,
+  "fields": {
+    "exchange": 24,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 4,
+    "changed_at": "2026-11-16T19:39:11.508Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 48,
+  "fields": {
+    "exchange": 24,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 5,
+    "changed_at": "2026-11-16T19:39:11.508Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 49,
+  "fields": {
+    "exchange": 25,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 5,
+    "changed_at": "2026-11-16T19:39:11.508Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 50,
+  "fields": {
+    "exchange": 25,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 6,
+    "changed_at": "2026-11-16T19:39:11.508Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 51,
+  "fields": {
+    "exchange": 26,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 6,
+    "changed_at": "2026-11-16T19:39:11.509Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 52,
+  "fields": {
+    "exchange": 26,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 7,
+    "changed_at": "2026-11-16T19:39:11.509Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 53,
+  "fields": {
+    "exchange": 27,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 7,
+    "changed_at": "2026-11-16T19:39:11.510Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 54,
+  "fields": {
+    "exchange": 27,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 8,
+    "changed_at": "2026-11-16T19:39:11.510Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 55,
+  "fields": {
+    "exchange": 28,
+    "old_status": "new",
+    "new_status": "cancelled",
+    "changed_by": 8,
+    "changed_at": "2026-11-16T19:39:11.511Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 56,
+  "fields": {
+    "exchange": 28,
+    "old_status": "cancelled",
+    "new_status": "cancelled",
+    "changed_by": 9,
+    "changed_at": "2026-11-16T19:39:11.511Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 57,
+  "fields": {
+    "exchange": 29,
+    "old_status": "new",
+    "new_status": "cancelled",
+    "changed_by": 9,
+    "changed_at": "2026-11-16T19:39:11.511Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 58,
+  "fields": {
+    "exchange": 29,
+    "old_status": "cancelled",
+    "new_status": "cancelled",
+    "changed_by": 10,
+    "changed_at": "2026-11-16T19:39:11.511Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 59,
+  "fields": {
+    "exchange": 30,
+    "old_status": "new",
+    "new_status": "cancelled",
+    "changed_by": 10,
+    "changed_at": "2026-11-16T19:39:11.512Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 60,
+  "fields": {
+    "exchange": 30,
+    "old_status": "cancelled",
+    "new_status": "cancelled",
+    "changed_by": 11,
+    "changed_at": "2026-11-16T19:39:11.512Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 61,
+  "fields": {
+    "exchange": 31,
+    "old_status": "new",
+    "new_status": "dispute",
+    "changed_by": 11,
+    "changed_at": "2026-11-16T19:39:11.512Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 62,
+  "fields": {
+    "exchange": 31,
+    "old_status": "dispute",
+    "new_status": "dispute",
+    "changed_by": 12,
+    "changed_at": "2026-11-16T19:39:11.513Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 63,
+  "fields": {
+    "exchange": 32,
+    "old_status": "new",
+    "new_status": "dispute",
+    "changed_by": 12,
+    "changed_at": "2026-11-16T19:39:11.513Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 64,
+  "fields": {
+    "exchange": 32,
+    "old_status": "dispute",
+    "new_status": "dispute",
+    "changed_by": 13,
+    "changed_at": "2026-11-16T19:39:11.513Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 65,
+  "fields": {
+    "exchange": 33,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 13,
+    "changed_at": "2026-11-16T19:39:11.514Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 66,
+  "fields": {
+    "exchange": 33,
+    "old_status": "new",
+    "new_status": "new",
+    "changed_by": 14,
+    "changed_at": "2026-11-16T19:39:11.514Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 67,
+  "fields": {
+    "exchange": 34,
+    "old_status": "new",
+    "new_status": "dispute",
+    "changed_by": 14,
+    "changed_at": "2026-11-16T19:39:11.515Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 68,
+  "fields": {
+    "exchange": 34,
+    "old_status": "dispute",
+    "new_status": "dispute",
+    "changed_by": 15,
+    "changed_at": "2026-11-16T19:39:11.515Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 69,
+  "fields": {
+    "exchange": 35,
+    "old_status": "new",
+    "new_status": "done",
+    "changed_by": 15,
+    "changed_at": "2026-11-16T19:39:11.515Z"
+  }
+},
+{
+  "model": "core.exchangestatuslog",
+  "pk": 70,
+  "fields": {
+    "exchange": 35,
+    "old_status": "done",
+    "new_status": "done",
+    "changed_by": 16,
+    "changed_at": "2026-11-16T19:39:11.515Z"
+  }
+},
+{
+  "model": "core.complaint",
+  "pk": 1,
+  "fields": {
+    "exchange": 31,
+    "author": 16,
+    "reason": "mismatch",
+    "description": "Состояние экземпляра отличается от описания в карточке.",
+    "decision": "",
+    "moderator": null,
+    "decided_at": null,
+    "created_at": "2026-11-16T19:39:11.533Z"
+  }
+},
+{
+  "model": "core.complaint",
+  "pk": 2,
+  "fields": {
+    "exchange": 32,
+    "author": 17,
+    "reason": "mismatch",
+    "description": "Состояние экземпляра отличается от описания в карточке.",
+    "decision": "",
+    "moderator": null,
+    "decided_at": null,
+    "created_at": "2026-11-16T19:39:11.534Z"
+  }
+},
+{
+  "model": "core.complaint",
+  "pk": 3,
+  "fields": {
+    "exchange": 34,
+    "author": 19,
+    "reason": "mismatch",
+    "description": "Состояние экземпляра отличается от описания в карточке.",
+    "decision": "",
+    "moderator": null,
+    "decided_at": null,
+    "created_at": "2026-11-16T19:39:11.535Z"
+  }
+},
+{
+  "model": "core.complaint",
+  "pk": 4,
+  "fields": {
+    "exchange": 35,
+    "author": 20,
+    "reason": "mismatch",
+    "description": "Состояние экземпляра отличается от описания в карточке.",
+    "decision": "",
+    "moderator": null,
+    "decided_at": null,
+    "created_at": "2026-11-16T19:39:11.535Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 1,
+  "fields": {
+    "exchange": 12,
+    "author": 17,
+    "target": 12,
+    "rating": 5,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.517Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 2,
+  "fields": {
+    "exchange": 13,
+    "author": 18,
+    "target": 13,
+    "rating": 5,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.519Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 3,
+  "fields": {
+    "exchange": 14,
+    "author": 19,
+    "target": 14,
+    "rating": 4,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.520Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 4,
+  "fields": {
+    "exchange": 15,
+    "author": 20,
+    "target": 15,
+    "rating": 4,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.521Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 5,
+  "fields": {
+    "exchange": 16,
+    "author": 1,
+    "target": 16,
+    "rating": 4,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.522Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 6,
+  "fields": {
+    "exchange": 17,
+    "author": 2,
+    "target": 17,
+    "rating": 4,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.523Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 7,
+  "fields": {
+    "exchange": 18,
+    "author": 3,
+    "target": 18,
+    "rating": 4,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.524Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 8,
+  "fields": {
+    "exchange": 19,
+    "author": 4,
+    "target": 19,
+    "rating": 4,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.525Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 9,
+  "fields": {
+    "exchange": 20,
+    "author": 5,
+    "target": 20,
+    "rating": 4,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.526Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 10,
+  "fields": {
+    "exchange": 21,
+    "author": 6,
+    "target": 1,
+    "rating": 4,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.527Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 11,
+  "fields": {
+    "exchange": 23,
+    "author": 8,
+    "target": 3,
+    "rating": 3,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.528Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 12,
+  "fields": {
+    "exchange": 24,
+    "author": 9,
+    "target": 4,
+    "rating": 3,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.529Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 13,
+  "fields": {
+    "exchange": 25,
+    "author": 10,
+    "target": 5,
+    "rating": 3,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.530Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 14,
+  "fields": {
+    "exchange": 26,
+    "author": 11,
+    "target": 6,
+    "rating": 2,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.531Z"
+  }
+},
+{
+  "model": "core.review",
+  "pk": 15,
+  "fields": {
+    "exchange": 35,
+    "author": 20,
+    "target": 15,
+    "rating": 3,
+    "text": "Демонстрационный отзыв после завершённого обмена.",
+    "created_at": "2026-11-16T19:39:11.532Z"
+  }
+}
+]

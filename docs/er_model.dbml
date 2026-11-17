@@ -1,0 +1,120 @@
+// Каноническая ER-модель приложения core для отчёта №5.
+// В Django имена таблиц по умолчанию: core_reader, core_readerprofile,
+// core_book, core_bookgenre, core_copy, core_copyphoto,
+// core_exchange, core_exchangestatuslog, core_complaint, core_review, core_genre.
+
+Table reader {
+  id bigint [pk, increment]
+  email varchar(254) [not null, unique]
+  password varchar(128) [not null, note: 'Django hash']
+  role varchar(10) [not null, note: 'reader/moderator/admin']
+  is_active boolean [not null, default: true]
+  date_joined timestamp [not null]
+  last_login timestamp
+}
+
+Table reader_profile {
+  id bigint [pk, increment]
+  reader_id bigint [not null, unique, ref: - reader.id]
+  city varchar(80) [not null]
+  phone varchar(20)
+  balance integer [not null, default: 0]
+  display_name varchar(60) [not null]
+  about text
+}
+
+Table genre {
+  id bigint [pk, increment]
+  name varchar(60) [not null, unique]
+  description varchar(240)
+}
+
+Table book {
+  id bigint [pk, increment]
+  title varchar(200) [not null]
+  author varchar(150) [not null]
+  isbn varchar(17)
+  year smallint
+  description text
+  indexes {
+    (title, author) [unique]
+    (author, title)
+  }
+}
+
+Table book_genre {
+  id bigint [pk, increment]
+  book_id bigint [not null, ref: > book.id]
+  genre varchar(60) [not null, ref: > genre.name]
+  indexes {
+    (book_id, genre) [unique]
+  }
+}
+
+Table copy {
+  id bigint [pk, increment]
+  book_id bigint [not null, ref: > book.id]
+  owner_id bigint [not null, ref: > reader_profile.id]
+  condition varchar(15) [not null]
+  city varchar(80) [not null]
+  is_available boolean [not null, default: true]
+  moderation_status varchar(10) [not null, note: 'pending/approved/rejected']
+  created_at timestamp [not null]
+  indexes {
+    (city, is_available) [name: 'idx_copy_city_avail']
+  }
+}
+
+Table copy_photo {
+  id bigint [pk, increment]
+  copy_id bigint [not null, ref: > copy.id]
+  image varchar(100) [not null]
+  uploaded_at timestamp [not null]
+}
+
+Table exchange {
+  id bigint [pk, increment]
+  copy_id bigint [not null, ref: > copy.id]
+  requester_id bigint [not null, ref: > reader_profile.id]
+  status varchar(12) [not null]
+  method varchar(10)
+  meet_place varchar(255)
+  meet_at timestamp
+  track_no varchar(40)
+  created_at timestamp [not null]
+  updated_at timestamp [not null]
+  indexes {
+    (status, created_at) [name: 'idx_exchange_status_created']
+  }
+}
+
+Table exchange_status_log {
+  id bigint [pk, increment]
+  exchange_id bigint [not null, ref: > exchange.id]
+  old_status varchar(12) [not null]
+  new_status varchar(12) [not null]
+  changed_by_id bigint [not null, ref: > reader.id]
+  changed_at timestamp [not null]
+}
+
+Table complaint {
+  id bigint [pk, increment]
+  exchange_id bigint [not null, unique, ref: - exchange.id]
+  author_id bigint [not null, ref: > reader_profile.id]
+  reason varchar(30) [not null]
+  description text [not null]
+  decision varchar(15)
+  moderator_id bigint [ref: > reader.id]
+  decided_at timestamp
+  created_at timestamp [not null]
+}
+
+Table review {
+  id bigint [pk, increment]
+  exchange_id bigint [not null, unique, ref: - exchange.id]
+  author_id bigint [not null, ref: > reader_profile.id]
+  target_id bigint [not null, ref: > reader_profile.id]
+  rating smallint [not null]
+  text text
+  created_at timestamp [not null]
+}

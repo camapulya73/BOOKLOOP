@@ -1,0 +1,71 @@
+{% extends 'books/base.html' %}
+{% block content %}
+    <p class="muted">
+        <a href="{% url 'catalog' %}">
+            Каталог
+        </a>
+        /
+        {{ book.title }}
+    </p>
+    <section class="detail">
+        <div class="detailcover">
+            {% if book.cover %}
+                <img src="{{ book.cover.url }}" alt="Обложка {{ book.title }}">
+            {% else %}
+                {{ book.title }}
+            {% endif %}
+        </div>
+        <div>
+            <span class="eyebrow">
+                {{ book.category.name }}
+                ·
+                {{ book.get_condition_display }}
+            </span>
+            <h1>
+                {{ book.title }}
+            </h1>
+            <h2>
+                {{ book.author }}
+            </h2>
+            <p>
+                {{ book.description|default:'Владелец готов передать эту книгу следующему читателю.' }}
+            </p>
+            <p>
+                ⌖
+                {{ book.city }}
+                · Владелец:
+                <a href="{% url 'public_profile' book.owner.reader.email %}">
+                    {{ book.owner.username }}
+                </a>
+            </p>
+            {% if user.is_authenticated %}
+                {% if user != book.owner.reader %}
+                    <form method="post" action="{% url 'propose_exchange' book.pk %}">
+                        {% csrf_token %}
+                        <button class="button">
+                            Предложить обмен
+                        </button>
+                    </form>
+                    <form method="post" action="{% url 'toggle_favorite' book.pk %}">
+                        {% csrf_token %}
+                        <button class="button light">
+                            {% if is_favorite %}
+                                Убрать из избранного
+                            {% else %}
+                                В избранное ♡
+                            {% endif %}
+                        </button>
+                    </form>
+                {% else %}
+                    <p class="notice">
+                        Это ваша книга.
+                    </p>
+                {% endif %}
+            {% else %}
+                <a class="button" href="{% url 'login' %}?next={{ request.path }}">
+                    Войдите, чтобы предложить обмен
+                </a>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
