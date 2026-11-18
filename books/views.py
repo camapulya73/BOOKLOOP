@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db import transaction
 from django.db.models import Q, Count
 from django.shortcuts import get_object_or_404, redirect, render
+from django.core.paginator import Paginator
 from django.views.decorators.http import require_POST
 
 from core.models import (
@@ -54,8 +55,17 @@ def catalog(request):
     if condition:
         qs = qs.filter(condition=condition)
     qs = qs.order_by('book__title') if request.GET.get('sort') == 'title' else qs.order_by('-created_at')
+
+    paginator = Paginator(qs, 20)
+    page_obj = paginator.get_page(request.GET.get('page'))
+
+    query_params = request.GET.copy()
+    query_params.pop('page', None)
+
     return render(request, 'books/catalog.html', {
-        'books': qs,
+        'books': page_obj.object_list,
+        'page_obj': page_obj,
+        'query_params': query_params.urlencode(),
         'genres': Genre.objects.all(),
         'q': q,
         'city': city,

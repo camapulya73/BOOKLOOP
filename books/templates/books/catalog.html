@@ -58,15 +58,20 @@
         </button>
     </form>
     <p class="muted">
-        Найдено:
-        {{ books|length }}
+        Найдено: {{ page_obj.paginator.count }}
     </p>
     <div class="grid">
         {% for book in books %}
             <article class="card">
                 <a class="cover" href="{% url 'book_detail' book.pk %}">
                     {% if book.cover %}
-                        <img src="{{ book.cover.url }}" alt="Обложка {{ book.title }}">
+                        <img
+                            src="{{ book.cover.url }}"
+                            alt="Обложка книги {{ book.title }}"
+                            width="300"
+                            height="420"
+                            loading="lazy"
+                        >
                     {% else %}
                         <strong>
                             {{ book.title }}
@@ -109,4 +114,23 @@
             </div>
         {% endfor %}
     </div>
+        {% if page_obj.has_other_pages %}
+        <nav class="pagination" aria-label="Страницы каталога">
+            {% if page_obj.has_previous %}
+                <a href="?{% if query_params %}{{ query_params }}&{% endif %}page={{ page_obj.previous_page_number }}">
+                    Назад
+                </a>
+            {% endif %}
+
+            <span>
+                Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?{% if query_params %}{{ query_params }}&{% endif %}page={{ page_obj.next_page_number }}">
+                    Далее
+                </a>
+            {% endif %}
+        </nav>
+    {% endif %}
 {% endblock %}
