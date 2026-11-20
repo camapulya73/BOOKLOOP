@@ -1,29 +1,12 @@
 {% extends 'books/base.html' %}
 {% block content %}
     <div class="formbox">
-        <span class="eyebrow">
-            ВАШ АККАУНТ
-        </span>
-        <h1>
-            Редактировать профиль
-        </h1>
-        <form method="post">
+        <span class="eyebrow">ВАШ АККАУНТ</span>
+        <h1>Редактировать профиль</h1>
+        <form method="post" data-validate-form novalidate>
             {% csrf_token %}
-            <label>
-                Имя
-                <input name="display_name" maxlength="60" value="{{ profile.display_name }}">
-            </label>
-            <label>
-                Email
-                <input type="email" name="email" maxlength="254" value="{{ user.email }}">
-            </label>
-            <label>
-                Город
-                <input name="city" maxlength="80" value="{{ profile.city }}">
-            </label>
-            <button class="button">
-                Сохранить
-            </button>
+            {{ form.as_p }}
+            <button class="button" type="submit">Сохранить</button>
         </form>
     </div>
 {% endblock %}

@@ -582,3 +582,9 @@ footer {
         font-size: 36px;
     }
 }
+
+
+/* Состояния динамической загрузки и клиентской обратной связи (занятие 9). */
+#book-results[aria-busy="true"] { opacity: .55; pointer-events: none; }
+[data-favorite-status], #search-status { min-height: 1.4em; }
+form button:disabled { cursor: wait; opacity: .65; }

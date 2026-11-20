@@ -46,15 +46,12 @@
                             Предложить обмен
                         </button>
                     </form>
-                    <form method="post" action="{% url 'toggle_favorite' book.pk %}">
+                    <form method="post" action="{% url 'toggle_favorite' book.pk %}" data-favorite-form>
                         {% csrf_token %}
-                        <button class="button light">
-                            {% if is_favorite %}
-                                Убрать из избранного
-                            {% else %}
-                                В избранное ♡
-                            {% endif %}
+                        <button class="button light" type="submit" aria-pressed="{{ is_favorite|yesno:'true,false' }}">
+                            {% if is_favorite %}Убрать из избранного{% else %}В избранное ♡{% endif %}
                         </button>
+                        <span class="muted" data-favorite-status role="status" aria-live="polite"></span>
                     </form>
                 {% else %}
                     <p class="notice">

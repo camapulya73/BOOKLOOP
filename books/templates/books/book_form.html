@@ -10,7 +10,7 @@
         <p>
             Расскажи о произведении и экземпляре, чтобы его нашёл следующий читатель.
         </p>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" data-validate-form novalidate>
             {% csrf_token %}
             {{ form.as_p }}
             <button class="button">

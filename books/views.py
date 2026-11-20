@@ -1,20 +1,24 @@
+import logging
+
 from django.contrib import messages
 from django.contrib.auth import get_user_model, login
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db import transaction
 from django.db.models import Q, Count
 from django.shortcuts import get_object_or_404, redirect, render
-from django.core.paginator import Paginator
+from django.http import JsonResponse
+from django.urls import reverse
 from django.views.decorators.http import require_POST
 
 from core.models import (
     Copy, Exchange, ExchangeStatusLog,
     Genre, ReaderProfile, Review,
 )
-from .forms import BookForm, RegisterForm
+from .forms import BookForm, ProfileForm, RegisterForm
 from .models import Favorite, Notification
 
 User = get_user_model()
+logger = logging.getLogger('books')
 
 
 def home(request):
@@ -55,23 +59,43 @@ def catalog(request):
     if condition:
         qs = qs.filter(condition=condition)
     qs = qs.order_by('book__title') if request.GET.get('sort') == 'title' else qs.order_by('-created_at')
-
-    paginator = Paginator(qs, 20)
-    page_obj = paginator.get_page(request.GET.get('page'))
-
-    query_params = request.GET.copy()
-    query_params.pop('page', None)
-
     return render(request, 'books/catalog.html', {
-        'books': page_obj.object_list,
-        'page_obj': page_obj,
-        'query_params': query_params.urlencode(),
+        'books': qs,
         'genres': Genre.objects.all(),
         'q': q,
         'city': city,
         'selected_genre': genre,
         'condition': condition,
     })
+
+
+def search_books_json(request):
+    """Возвращает JSON для обновления результатов живого поиска."""
+    logger.info('Поиск книг: пользователь=%s, запрос=%r', request.user.pk if request.user.is_authenticated else 'anonymous', request.GET.get('q', '')[:100])
+    q = request.GET.get('q', '').strip()[:100]
+    qs = Copy.objects.filter(
+        is_available=True,
+        moderation_status=Copy.ModerationStatus.APPROVED,
+    ).select_related('book').prefetch_related('photos', 'book__genres')
+    if q:
+        qs = qs.filter(
+            Q(book__title__icontains=q)
+            | Q(book__author__icontains=q)
+            | Q(book__bookgenre__genre__name__icontains=q)
+        ).distinct()
+    results = []
+    for copy in qs.order_by('-created_at')[:30]:
+        photo = copy.photos.first()
+        results.append({
+            'id': copy.pk,
+            'title': copy.book.title,
+            'author': copy.book.author,
+            'city': copy.city,
+            'condition': copy.get_condition_display(),
+            'url': reverse('book_detail', args=[copy.pk]),
+            'cover': photo.image.url if photo else '',
+        })
+    return JsonResponse({'results': results, 'count': len(results)})
 
 
 def book_detail(request, pk):
@@ -86,8 +110,14 @@ def book_detail(request, pk):
 
 def register(request):
     form = RegisterForm(request.POST or None)
+    if request.method == 'POST':
+        logger.info('Получена форма регистрации')
     if request.method == 'POST' and form.is_valid():
-        user = form.save()
+        try:
+            user = form.save()
+        except Exception:
+            logger.exception('Ошибка сохранения нового пользователя')
+            raise
         login(request, user)
         messages.success(request, 'Аккаунт создан. Добро пожаловать!')
         return redirect('profile')
@@ -97,8 +127,14 @@ def register(request):
 @login_required
 def add_book(request):
     form = BookForm(request.POST or None, request.FILES or None)
+    if request.method == 'POST':
+        logger.info('Получена форма добавления книги: user_id=%s', request.user.pk)
     if request.method == 'POST' and form.is_valid():
-        copy = form.save(request.user.readerprofile)
+        try:
+            copy = form.save(request.user.readerprofile)
+        except Exception:
+            logger.exception('Ошибка сохранения экземпляра книги: user_id=%s', request.user.pk)
+            raise
         messages.success(request, 'Книга отправлена на модерацию.')
         Notification.objects.create(
             user=request.user,
@@ -132,15 +168,28 @@ def edit_profile(request):
         reader=request.user,
         defaults={'display_name': request.user.email.split('@')[0], 'city': 'Не указан'},
     )
+    initial = {
+        'display_name': profile_obj.display_name,
+        'email': request.user.email,
+        'city': profile_obj.city,
+        'phone': profile_obj.phone,
+    }
+    form = ProfileForm(
+        request.POST or None,
+        initial=initial if request.method == 'GET' else None,
+        reader=request.user,
+    )
     if request.method == 'POST':
-        request.user.email = request.POST.get('email', '').strip()[:254]
-        request.user.save(update_fields=['email'])
-        profile_obj.display_name = request.POST.get('display_name', '').strip()[:60]
-        profile_obj.city = request.POST.get('city', '').strip()[:80]
-        profile_obj.save(update_fields=['display_name', 'city'])
-        messages.success(request, 'Профиль обновлён.')
+        logger.info('Получена форма редактирования профиля: user_id=%s', request.user.pk)
+    if request.method == 'POST' and form.is_valid():
+        try:
+            form.save()
+        except Exception:
+            logger.exception('Ошибка сохранения профиля: user_id=%s', request.user.pk)
+            raise
+        messages.success(request, 'Профиль успешно обновлён.')
         return redirect('profile')
-    return render(request, 'books/edit_profile.html', {'profile': profile_obj})
+    return render(request, 'books/edit_profile.html', {'form': form, 'profile': profile_obj})
 
 
 @login_required
@@ -253,10 +302,19 @@ def exchange_action(request, pk, action):
 @require_POST
 def toggle_favorite(request, pk):
     copy = get_object_or_404(Copy, pk=pk)
+    logger.info('Изменение избранного: user_id=%s copy_id=%s', request.user.pk, copy.pk)
     favorite, created = Favorite.objects.get_or_create(user=request.user, copy=copy)
     if not created:
         favorite.delete()
+    is_favorite = created
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        return JsonResponse({
+            'success': True,
+            'is_favorite': is_favorite,
+            'label': 'Убрать из избранного' if is_favorite else 'В избранное ♡',
+        })
     return redirect('book_detail', pk=pk)
+
 
 
 def staff_check(user):

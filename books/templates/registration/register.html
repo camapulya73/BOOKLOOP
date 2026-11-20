@@ -7,7 +7,7 @@
         <h1>
             Регистрация
         </h1>
-        <form method="post">
+        <form method="post" data-validate-form novalidate>
             {% csrf_token %}
             {{ form.as_p }}
             <button class="button">
