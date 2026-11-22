@@ -1,62 +1,59 @@
 {% extends 'books/base.html' %}
 {% block content %}
     <p class="muted">
-        <a href="{% url 'catalog' %}">
-            Каталог
-        </a>
+        <a href="{% url 'catalog' %}">Каталог</a>
         /
-        {{ book.title }}
+        {{ book.book.title }}
     </p>
+
     <section class="detail">
         <div class="detailcover">
-            {% if book.cover %}
-                <img src="{{ book.cover.url }}" alt="Обложка {{ book.title }}">
-            {% else %}
-                {{ book.title }}
-            {% endif %}
+            {{ book.book.title }}
         </div>
+
         <div>
             <span class="eyebrow">
-                {{ book.category.name }}
+                {% for genre in book.book.genres.all %}
+                    {{ genre.name }}{% if not forloop.last %}, {% endif %}
+                {% empty %}
+                    Жанр не указан
+                {% endfor %}
                 ·
                 {{ book.get_condition_display }}
             </span>
-            <h1>
-                {{ book.title }}
-            </h1>
-            <h2>
-                {{ book.author }}
-            </h2>
+
+            <h1>{{ book.book.title }}</h1>
+            <h2>{{ book.book.author }}</h2>
+
             <p>
-                {{ book.description|default:'Владелец готов передать эту книгу следующему читателю.' }}
+                {{ book.book.description|default:'Владелец готов передать эту книгу следующему читателю.' }}
             </p>
+
             <p>
-                ⌖
-                {{ book.city }}
+                ⌖ {{ book.city }}
                 · Владелец:
                 <a href="{% url 'public_profile' book.owner.reader.email %}">
-                    {{ book.owner.username }}
+                    {{ book.owner.reader.username }}
                 </a>
             </p>
+
             {% if user.is_authenticated %}
                 {% if user != book.owner.reader %}
                     <form method="post" action="{% url 'propose_exchange' book.pk %}">
                         {% csrf_token %}
-                        <button class="button">
-                            Предложить обмен
-                        </button>
+                        <button class="button">Предложить обмен</button>
                     </form>
+
                     <form method="post" action="{% url 'toggle_favorite' book.pk %}" data-favorite-form>
                         {% csrf_token %}
-                        <button class="button light" type="submit" aria-pressed="{{ is_favorite|yesno:'true,false' }}">
+                        <button class="button light" type="submit"
+                                aria-pressed="{{ is_favorite|yesno:'true,false' }}">
                             {% if is_favorite %}Убрать из избранного{% else %}В избранное ♡{% endif %}
                         </button>
                         <span class="muted" data-favorite-status role="status" aria-live="polite"></span>
                     </form>
                 {% else %}
-                    <p class="notice">
-                        Это ваша книга.
-                    </p>
+                    <p class="notice">Это ваша книга.</p>
                 {% endif %}
             {% else %}
                 <a class="button" href="{% url 'login' %}?next={{ request.path }}">
