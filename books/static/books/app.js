@@ -164,7 +164,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     body: new FormData(form),
                 });
-                const data = await response.json();
+                let data;
+
+                try {
+                    data = await response.json();
+                } catch {
+                    throw new Error('Сервер вернул некорректный ответ.');
+                }
                 if (!response.ok || !data.success) throw new Error(data.error || 'Не удалось обновить избранное.');
                 button.textContent = data.label;
                 button.setAttribute('aria-pressed', String(data.is_favorite));
