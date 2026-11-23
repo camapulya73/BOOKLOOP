@@ -312,7 +312,12 @@ def exchange_action(request, pk, action):
 @login_required
 @require_POST
 def toggle_favorite(request, pk):
-    copy = get_object_or_404(Copy, pk=pk)
+    copy = get_object_or_404(Copy, pk=pk, moderation_status=Copy.ModerationStatus.APPROVED)
+    if copy.owner.reader_id == request.user.id:
+        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            return JsonResponse({'success': False, 'error': 'Нельзя добавить в избранное собственную книгу.'}, status=400)
+        messages.error(request, 'Нельзя добавить в избранное собственную книгу.')
+        return redirect('book_detail', pk=pk)
     logger.info('Изменение избранного: user_id=%s copy_id=%s', request.user.pk, copy.pk)
     favorite, created = Favorite.objects.get_or_create(user=request.user, copy=copy)
     if not created:
