@@ -33,6 +33,23 @@ def home(request):
     return render(request, 'books/home.html', {'latest': latest})
 
 
+def _filter_copies(qs, q, city, genre, condition):
+    """Общие фильтры каталога и живого поиска."""
+    if q:
+        qs = qs.filter(
+            Q(book__title__icontains=q)
+            | Q(book__author__icontains=q)
+            | Q(book__bookgenre__genre__name__icontains=q)
+        ).distinct()
+    if city:
+        qs = qs.filter(city__icontains=city)
+    if genre:
+        qs = qs.filter(book__bookgenre__genre__name=genre)
+    if condition:
+        qs = qs.filter(condition=condition)
+    return qs
+
+
 def catalog(request):
     qs = (
         Copy.objects.filter(
@@ -46,18 +63,7 @@ def catalog(request):
     city = request.GET.get('city', '').strip()
     genre = request.GET.get('genre', '').strip()
     condition = request.GET.get('condition', '').strip()
-    if q:
-        qs = qs.filter(
-            Q(book__title__icontains=q)
-            | Q(book__author__icontains=q)
-            | Q(book__bookgenre__genre__name__icontains=q)
-        ).distinct()
-    if city:
-        qs = qs.filter(city__icontains=city)
-    if genre:
-        qs = qs.filter(book__bookgenre__genre__name=genre)
-    if condition:
-        qs = qs.filter(condition=condition)
+    qs = _filter_copies(qs, q, city, genre, condition)
     qs = qs.order_by('book__title') if request.GET.get('sort') == 'title' else qs.order_by('-created_at')
     return render(request, 'books/catalog.html', {
         'books': qs,
@@ -73,16 +79,14 @@ def search_books_json(request):
     """Возвращает JSON для обновления результатов живого поиска."""
     logger.info('Поиск книг: пользователь=%s, запрос=%r', request.user.pk if request.user.is_authenticated else 'anonymous', request.GET.get('q', '')[:100])
     q = request.GET.get('q', '').strip()[:100]
+    city = request.GET.get('city', '').strip()[:100]
+    genre = request.GET.get('genre', '').strip()[:100]
+    condition = request.GET.get('condition', '').strip()[:20]
     qs = Copy.objects.filter(
         is_available=True,
         moderation_status=Copy.ModerationStatus.APPROVED,
     ).select_related('book').prefetch_related('photos', 'book__genres')
-    if q:
-        qs = qs.filter(
-            Q(book__title__icontains=q)
-            | Q(book__author__icontains=q)
-            | Q(book__bookgenre__genre__name__icontains=q)
-        ).distinct()
+    qs = _filter_copies(qs, q, city, genre, condition)
     results = []
     for copy in qs.order_by('-created_at')[:30]:
         photo = copy.photos.first()
