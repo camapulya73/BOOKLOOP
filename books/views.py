@@ -88,7 +88,7 @@ def search_books_json(request):
     ).select_related('book').prefetch_related('photos', 'book__genres')
     qs = _filter_copies(qs, q, city, genre, condition)
     results = []
-    for copy in qs.order_by('-created_at')[:30]:
+    for copy in qs.order_by('-created_at'):
         photo = copy.photos.first()
         results.append({
             'id': copy.pk,
