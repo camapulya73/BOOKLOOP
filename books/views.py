@@ -159,7 +159,7 @@ def profile(request, username=None):
     target = get_object_or_404(User, email=username) if username else request.user
     profile_obj = get_object_or_404(ReaderProfile, reader=target)
     books = profile_obj.copies.filter(moderation_status=Copy.ModerationStatus.APPROVED).select_related('book').prefetch_related('photos')
-    stats = profile_obj.copies.aggregate(total=Count('id'))
+    stats = books.aggregate(total=Count('id'))
     reviews = Review.objects.filter(target=profile_obj).select_related('author__reader')
     return render(request, 'books/profile.html', {
         'target': target,
