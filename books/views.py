@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db import transaction
 from django.db.models import Q, Count
 from django.shortcuts import get_object_or_404, redirect, render
-from django.http import Http404, JsonResponse
+from django.http import JsonResponse
 from django.urls import reverse
 from django.views.decorators.http import require_POST
 
@@ -33,23 +33,6 @@ def home(request):
     return render(request, 'books/home.html', {'latest': latest})
 
 
-def _filter_copies(qs, q, city, genre, condition):
-    """Общие фильтры каталога и живого поиска."""
-    if q:
-        qs = qs.filter(
-            Q(book__title__icontains=q)
-            | Q(book__author__icontains=q)
-            | Q(book__bookgenre__genre__name__icontains=q)
-        ).distinct()
-    if city:
-        qs = qs.filter(city__icontains=city)
-    if genre:
-        qs = qs.filter(book__bookgenre__genre__name=genre)
-    if condition:
-        qs = qs.filter(condition=condition)
-    return qs
-
-
 def catalog(request):
     qs = (
         Copy.objects.filter(
@@ -63,7 +46,18 @@ def catalog(request):
     city = request.GET.get('city', '').strip()
     genre = request.GET.get('genre', '').strip()
     condition = request.GET.get('condition', '').strip()
-    qs = _filter_copies(qs, q, city, genre, condition)
+    if q:
+        qs = qs.filter(
+            Q(book__title__icontains=q)
+            | Q(book__author__icontains=q)
+            | Q(book__bookgenre__genre__name__icontains=q)
+        ).distinct()
+    if city:
+        qs = qs.filter(city__icontains=city)
+    if genre:
+        qs = qs.filter(book__bookgenre__genre__name=genre)
+    if condition:
+        qs = qs.filter(condition=condition)
     qs = qs.order_by('book__title') if request.GET.get('sort') == 'title' else qs.order_by('-created_at')
     return render(request, 'books/catalog.html', {
         'books': qs,
@@ -79,16 +73,18 @@ def search_books_json(request):
     """Возвращает JSON для обновления результатов живого поиска."""
     logger.info('Поиск книг: пользователь=%s, запрос=%r', request.user.pk if request.user.is_authenticated else 'anonymous', request.GET.get('q', '')[:100])
     q = request.GET.get('q', '').strip()[:100]
-    city = request.GET.get('city', '').strip()[:100]
-    genre = request.GET.get('genre', '').strip()[:100]
-    condition = request.GET.get('condition', '').strip()[:20]
     qs = Copy.objects.filter(
         is_available=True,
         moderation_status=Copy.ModerationStatus.APPROVED,
     ).select_related('book').prefetch_related('photos', 'book__genres')
-    qs = _filter_copies(qs, q, city, genre, condition)
+    if q:
+        qs = qs.filter(
+            Q(book__title__icontains=q)
+            | Q(book__author__icontains=q)
+            | Q(book__bookgenre__genre__name__icontains=q)
+        ).distinct()
     results = []
-    for copy in qs.order_by('-created_at'):
+    for copy in qs.order_by('-created_at')[:30]:
         photo = copy.photos.first()
         results.append({
             'id': copy.pk,
@@ -108,10 +104,6 @@ def book_detail(request, pk):
         .prefetch_related('photos', 'book__genres'),
         pk=pk,
     )
-    if copy.moderation_status != Copy.ModerationStatus.APPROVED:
-        user = request.user
-        if not (user.is_authenticated and (user.is_staff or copy.owner.reader_id == user.id)):
-            raise Http404('Экземпляр ещё не прошёл модерацию.')
     is_favorite = request.user.is_authenticated and Favorite.objects.filter(user=request.user, copy=copy).exists()
     return render(request, 'books/book_detail.html', {'book': copy, 'is_favorite': is_favorite})
 
@@ -159,7 +151,7 @@ def profile(request, username=None):
     target = get_object_or_404(User, email=username) if username else request.user
     profile_obj = get_object_or_404(ReaderProfile, reader=target)
     books = profile_obj.copies.filter(moderation_status=Copy.ModerationStatus.APPROVED).select_related('book').prefetch_related('photos')
-    stats = books.aggregate(total=Count('id'))
+    stats = profile_obj.copies.aggregate(total=Count('id'))
     reviews = Review.objects.filter(target=profile_obj).select_related('author__reader')
     return render(request, 'books/profile.html', {
         'target': target,
@@ -272,9 +264,6 @@ def exchange_action(request, pk, action):
         return redirect('exchanges')
 
     if action == 'accept' and exchange.status == Exchange.Status.NEW:
-        if not exchange.copy.is_available:
-            messages.error(request, 'Экземпляр уже передаётся другому читателю: принять этот запрос нельзя.')
-            return redirect('exchanges')
         exchange.status = Exchange.Status.ACCEPTED
         exchange.copy.is_available = False
         exchange.copy.save(update_fields=['is_available'])
@@ -312,12 +301,7 @@ def exchange_action(request, pk, action):
 @login_required
 @require_POST
 def toggle_favorite(request, pk):
-    copy = get_object_or_404(Copy, pk=pk, moderation_status=Copy.ModerationStatus.APPROVED)
-    if copy.owner.reader_id == request.user.id:
-        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-            return JsonResponse({'success': False, 'error': 'Нельзя добавить в избранное собственную книгу.'}, status=400)
-        messages.error(request, 'Нельзя добавить в избранное собственную книгу.')
-        return redirect('book_detail', pk=pk)
+    copy = get_object_or_404(Copy, pk=pk)
     logger.info('Изменение избранного: user_id=%s copy_id=%s', request.user.pk, copy.pk)
     favorite, created = Favorite.objects.get_or_create(user=request.user, copy=copy)
     if not created:

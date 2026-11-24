@@ -6,11 +6,7 @@ from core.models import Book, BookGenre, Copy, CopyPhoto, Genre, Reader, ReaderP
 
 
 class RegisterForm(forms.Form):
-    email = forms.EmailField(
-        label='Email',
-        widget=forms.EmailInput(attrs={'autocomplete': 'email'}),
-        error_messages={'invalid': 'Введите корректный адрес электронной почты.'},
-    )
+    email = forms.EmailField(label='Email', widget=forms.EmailInput(attrs={'autocomplete': 'email'}))
     display_name = forms.CharField(max_length=60, min_length=2, label='Имя в профиле', widget=forms.TextInput(attrs={'minlength': 2}))
     city = forms.CharField(max_length=80, min_length=2, label='Город', widget=forms.TextInput(attrs={'minlength': 2}))
     phone = forms.CharField(max_length=20, required=False, label='Телефон', widget=forms.TelInput(attrs={'placeholder': '+79991234567'}))
@@ -129,11 +125,7 @@ class BookForm(forms.Form):
 
 class ProfileForm(forms.Form):
     display_name = forms.CharField(max_length=60, min_length=2, label='Имя', widget=forms.TextInput(attrs={'minlength': 2}))
-    email = forms.EmailField(
-        max_length=254,
-        label='Email',
-        error_messages={'invalid': 'Введите корректный адрес электронной почты.'},
-    )
+    email = forms.EmailField(max_length=254, label='Email')
     city = forms.CharField(max_length=80, min_length=2, label='Город', widget=forms.TextInput(attrs={'minlength': 2}))
     phone = forms.CharField(max_length=20, required=False, label='Телефон', widget=forms.TelInput(attrs={'placeholder': '+79991234567'}))
 
