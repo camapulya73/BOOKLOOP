@@ -1,0 +1,25 @@
+diff --git a/books/templates/books/catalog.html b/books/templates/books/catalog.html
+index 40a7f95..a4e7ee9 100644
+--- a/books/templates/books/catalog.html
++++ b/books/templates/books/catalog.html
+@@ -39,16 +39,16 @@
+                 <option value="">
+                     Любое
+                 </option>
+-                <option value="new">
++                <option value="new" {% if condition == 'new' %}selected{% endif %}>
+                     Новое
+                 </option>
+-                <option value="good">
++                <option value="good" {% if condition == 'good' %}selected{% endif %}>
+                     Хорошее
+                 </option>
+-                <option value="fair">
++                <option value="fair" {% if condition == 'fair' %}selected{% endif %}>
+                     Удовлетворительное
+                 </option>
+-                <option value="poor">
++                <option value="poor" {% if condition == 'poor' %}selected{% endif %}>
+                     Есть заметные повреждения
+                 </option>
+             </select>

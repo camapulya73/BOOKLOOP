@@ -1,0 +1,10 @@
+{% extends "books/base.html" %}
+{% block content %}
+<div class="container" style="text-align: center; padding: 50px;">
+    <h1 style="font-size: 72px; color: #c0392b;">403</h1>
+    <h2>Доступ запрещён</h2>
+    <p>У вас нет прав для просмотра этой страницы. Возможно, вы не вошли в аккаунт или это страница администратора.</p>
+    <a href="/" class="btn" style="background: #27ae60; color: white; padding: 10px 20px; text-decoration: none;">На главную</a>
+    <a href="/accounts/login/" class="btn" style="background: #3498db; color: white; padding: 10px 20px; text-decoration: none;">Войти</a>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+Вложение к BUG-11
+Заголовок: На ширине до 768 px без JavaScript меню навигации скрыто и не открывается: нет ссылок «Каталог», «Войти», «Регистрация», любая страница, роль гость
+==============================================================================
+Источник: проверка исполнителя в браузере Firefox 162.0b1 (экран ноутбука 1920×1200, дата 24.11.2026) и фрагменты исходного кода проекта
+Код проекта: состояние архива BOOKLOOP_Django.zip (до исправлений)
+------------------------------------------------------------------------------
+Фрагмент books/static/books/style.css (мобильная ширина):
+ 486          width: calc(100% - 32px);
+ 487      }
+ 488      .nav {
+ 489          min-height: 64px;
+ 490      }
+ 491      .menu-toggle {
+ 492          display: block;
+ 493      }
+ 494      nav {
+ 495          display: none;
+ 496          position: absolute;
+ 497          top: 64px;
+ 498          left: 0;
+ 499          right: 0;
+ 500          padding: 18px 24px;
+ 501          background: var(--paper);
+ 502          border-bottom: 1px solid var(--line);
+ 503          flex-direction: column;
+ 504          align-items: stretch;
+ 505          gap: 14px;
+ 506      }
+ 507      .nav.open nav {
+ 508          display: flex;
+ 509      }
+ 510      .hero {
+
+Фрагмент books/static/books/app.js (единственное место, где меню получает класс open):
+   1  document.addEventListener('DOMContentLoaded', () => {
+   2      // Мобильное меню.
+   3      const menuButton = document.querySelector('.menu-toggle');
+   4      const navigation = document.querySelector('.nav');
+   5      if (menuButton && navigation) {
+   6          menuButton.addEventListener('click', () => {
+   7              const isOpen = navigation.classList.toggle('open');
+   8              menuButton.setAttribute('aria-expanded', String(isOpen));
+   9              menuButton.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+  10          });
+  11      }
+  12  
+
+Вывод: без JavaScript класс open не добавляется, nav остаётся display: none. Подтвердить в браузере (TC-49).

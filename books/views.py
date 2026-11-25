@@ -156,6 +156,7 @@ def add_book(request):
 
 @login_required
 def profile(request, username=None):
+    1 / 0
     target = get_object_or_404(User, email=username) if username else request.user
     profile_obj = get_object_or_404(ReaderProfile, reader=target)
     books = profile_obj.copies.filter(moderation_status=Copy.ModerationStatus.APPROVED).select_related('book').prefetch_related('photos')

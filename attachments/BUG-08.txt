@@ -1,0 +1,11 @@
+Вложение к BUG-08
+Заголовок: Команда loaddata fixtures/demo.json завершается UnicodeDecodeError, в БД 0 читателей: файл сохранён в Windows-1251 вместо UTF-8, окружение разработчика
+==============================================================================
+Дата и время прогона: 23.11.2026 08:02:42 (время по настройке TIME_ZONE проекта)
+Окружение: Django 5.2.19, Python 3.12.3, SQLite 3.45.1, Linux; запросы через Django test client; эталонная БД (seed_demo)
+Код проекта: состояние архива BOOKLOOP_Django.zip (до исправлений)
+------------------------------------------------------------------------------
+Результат проверки до исправления (ФАКТИЧЕСКИЙ):
+loaddata fixtures/demo.json: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xcc in position 6768: invalid continuation byte
+
+Ожидаемый результат: Фикстура загружается: «Installed 342 object(s) from 1 fixture(s)», в БД 20 читателей (README, раздел «Фикстуры»).

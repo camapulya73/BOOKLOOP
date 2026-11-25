@@ -1,0 +1,13 @@
+diff --git a/books/static/books/style.css b/books/static/books/style.css
+index 8c797d3..30d01a0 100644
+--- a/books/static/books/style.css
++++ b/books/static/books/style.css
+@@ -82,6 +82,8 @@ nav form {
+ }
+ .menu-toggle {
+     display: none;
++    min-width: 44px;
++    min-height: 44px;
+     border: 1px solid var(--line);
+     background: white;
+     border-radius: 8px;

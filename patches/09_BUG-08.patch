@@ -1,0 +1,12 @@
+diff --git a/core/management/commands/export_demo_fixture.py b/core/management/commands/export_demo_fixture.py
+index 3f61a3b..6753690 100644
+--- a/core/management/commands/export_demo_fixture.py
++++ b/core/management/commands/export_demo_fixture.py
+@@ -11,5 +11,6 @@ class Command(BaseCommand):
+         fixture_dir = Path(settings.BASE_DIR) / 'fixtures'
+         fixture_dir.mkdir(parents=True, exist_ok=True)
+         output_path = fixture_dir / 'demo.json'
+-        call_command('dumpdata', 'core', indent=2, output=str(output_path))
++        with open(output_path, 'w', encoding='utf-8') as stream:
++            call_command('dumpdata', 'core', indent=2, stdout=stream)
+         self.stdout.write(self.style.SUCCESS(f'Фикстура сохранена: {output_path}'))

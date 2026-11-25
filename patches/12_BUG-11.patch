@@ -1,0 +1,55 @@
+diff --git a/books/static/books/style.css b/books/static/books/style.css
+index 30d01a0..bc81b9f 100644
+--- a/books/static/books/style.css
++++ b/books/static/books/style.css
+@@ -489,24 +489,35 @@ footer {
+     }
+     .nav {
+         min-height: 64px;
++        flex-wrap: wrap;
++    }
++    /* Без JavaScript меню не прячется: ссылки переносятся под логотип. */
++    nav {
++        flex-wrap: wrap;
++        width: 100%;
++        gap: 6px 18px;
++        padding-bottom: 12px;
+     }
+-    .menu-toggle {
++    /* Класс js ставится в base.html: со скриптом работает выпадающее меню. */
++    .js .menu-toggle {
+         display: block;
+     }
+-    nav {
++    .js nav {
+         display: none;
+         position: absolute;
+         top: 64px;
+         left: 0;
+         right: 0;
++        width: auto;
+         padding: 18px 24px;
+         background: var(--paper);
+         border-bottom: 1px solid var(--line);
+         flex-direction: column;
+         align-items: stretch;
++        flex-wrap: nowrap;
+         gap: 14px;
+     }
+-    .nav.open nav {
++    .js .nav.open nav {
+         display: flex;
+     }
+     .hero {
+diff --git a/books/templates/books/base.html b/books/templates/books/base.html
+index 0428cb8..8115d5e 100644
+--- a/books/templates/books/base.html
++++ b/books/templates/books/base.html
+@@ -10,6 +10,7 @@
+                 BOOKLOOP
+             {% endblock %}
+         </title>
++        <script>document.documentElement.classList.add('js');</script>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="{% static 'books/style.css' %}">
