@@ -272,6 +272,9 @@ def exchange_action(request, pk, action):
         return redirect('exchanges')
 
     if action == 'accept' and exchange.status == Exchange.Status.NEW:
+        if not exchange.copy.is_available:
+            messages.error(request, 'Экземпляр уже передаётся другому читателю: принять этот запрос нельзя.')
+            return redirect('exchanges')
         exchange.status = Exchange.Status.ACCEPTED
         exchange.copy.is_available = False
         exchange.copy.save(update_fields=['is_available'])
