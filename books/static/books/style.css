@@ -82,6 +82,8 @@ nav form {
 }
 .menu-toggle {
     display: none;
+    min-width: 44px;
+    min-height: 44px;
     border: 1px solid var(--line);
     background: white;
     border-radius: 8px;
