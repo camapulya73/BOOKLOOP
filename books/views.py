@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db import transaction
 from django.db.models import Q, Count
 from django.shortcuts import get_object_or_404, redirect, render
-from django.http import JsonResponse
+from django.http import Http404, JsonResponse
 from django.urls import reverse
 from django.views.decorators.http import require_POST
 
@@ -104,6 +104,10 @@ def book_detail(request, pk):
         .prefetch_related('photos', 'book__genres'),
         pk=pk,
     )
+    if copy.moderation_status != Copy.ModerationStatus.APPROVED:
+        user = request.user
+        if not (user.is_authenticated and (user.is_staff or copy.owner.reader_id == user.id)):
+            raise Http404('Экземпляр ещё не прошёл модерацию.')
     is_favorite = request.user.is_authenticated and Favorite.objects.filter(user=request.user, copy=copy).exists()
     return render(request, 'books/book_detail.html', {'book': copy, 'is_favorite': is_favorite})
 
