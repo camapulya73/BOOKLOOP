@@ -11,6 +11,5 @@ class Command(BaseCommand):
         fixture_dir = Path(settings.BASE_DIR) / 'fixtures'
         fixture_dir.mkdir(parents=True, exist_ok=True)
         output_path = fixture_dir / 'demo.json'
-        with open(output_path, 'w', encoding='utf-8') as stream:
-            call_command('dumpdata', 'core', indent=2, stdout=stream)
+        call_command('dumpdata', 'core', indent=2, output=str(output_path))
         self.stdout.write(self.style.SUCCESS(f'Фикстура сохранена: {output_path}'))

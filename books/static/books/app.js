@@ -108,8 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const runSearch = async () => {
             if (controller) controller.abort();
             controller = new AbortController();
-            const params = new URLSearchParams(new FormData(searchInput.form));
-            params.set('q', searchInput.value.trim());
+            const params = new URLSearchParams({ q: searchInput.value.trim() });
             searchStatus.textContent = 'Ищем книги…';
             resultsBox.setAttribute('aria-busy', 'true');
             try {
